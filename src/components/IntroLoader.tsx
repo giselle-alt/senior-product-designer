@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface IntroLoaderProps {
   onComplete: () => void;
@@ -7,8 +7,13 @@ interface IntroLoaderProps {
 
 const IntroLoader = ({ onComplete }: IntroLoaderProps) => {
   const [phase, setPhase] = useState<'loading' | 'reveal' | 'complete'>('loading');
+  const hasRun = useRef(false);
 
   useEffect(() => {
+    // Guard against double execution from React Strict Mode
+    if (hasRun.current) return;
+    hasRun.current = true;
+
     const timer1 = setTimeout(() => setPhase('reveal'), 1500);
     const timer2 = setTimeout(() => {
       setPhase('complete');
@@ -19,7 +24,7 @@ const IntroLoader = ({ onComplete }: IntroLoaderProps) => {
       clearTimeout(timer1);
       clearTimeout(timer2);
     };
-  }, [onComplete]);
+  }, []);
 
   return (
     <AnimatePresence>
