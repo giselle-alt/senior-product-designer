@@ -7,19 +7,19 @@ const FitnessAppSection = () => {
       number: 1,
       title: 'Finding the real problem',
       subtitle: 'Understanding why people weren\'t starting workouts',
-      href: 'https://www.gisellearbo.com/chapter1.html',
+      href: '/chapter1',
     },
     {
       number: 2,
       title: 'Fixing navigation',
       subtitle: 'Making it easier to find and start a workout',
-      href: 'https://www.gisellearbo.com/chapter2.html',
+      href: '/chapter2',
     },
     {
       number: 3,
       title: 'Helping users come back',
       subtitle: 'Personalization, reminders, and habit-building',
-      href: 'https://www.gisellearbo.com/chapter3.html',
+      href: '/chapter3',
     },
   ];
 
