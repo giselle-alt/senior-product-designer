@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import IntroLoader from '@/components/IntroLoader';
 import FloatingParticles from '@/components/FloatingParticles';
+import CursorGlow from '@/components/CursorGlow';
 import Hero from '@/components/Hero';
 import FitnessAppSection from '@/components/FitnessAppSection';
 import EarlierWorkSection from '@/components/EarlierWorkSection';
@@ -36,6 +37,9 @@ const Index = () => {
 
       {/* Floating particles */}
       {isLoaded && <FloatingParticles />}
+
+      {/* Cursor glow effect */}
+      {isLoaded && <CursorGlow />}
 
       {/* Parallax background glow */}
       <motion.div
