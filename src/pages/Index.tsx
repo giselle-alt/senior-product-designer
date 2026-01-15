@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import IntroLoader from '@/components/IntroLoader';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
+import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FitnessAppSection from '@/components/FitnessAppSection';
 import EarlierWorkSection from '@/components/EarlierWorkSection';
@@ -40,6 +41,9 @@ const Index = () => {
 
       {/* Cursor glow effect */}
       {isLoaded && <CursorGlow />}
+
+      {/* Navigation */}
+      {isLoaded && <Navigation />}
 
       {/* Parallax background glow */}
       <motion.div
