@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ChapterCardProps {
   number: number;
@@ -11,16 +12,16 @@ interface ChapterCardProps {
 
 const ChapterCard = ({ number, title, subtitle, href, delay = 0 }: ChapterCardProps) => {
   return (
-    <motion.a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative block"
     >
+      <Link
+        to={href}
+        className="group relative block"
+      >
       <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 md:p-10 transition-all duration-700 ease-out hover:border-primary/30 hover:bg-card/80">
         {/* Hover glow effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -58,7 +59,8 @@ const ChapterCard = ({ number, title, subtitle, href, delay = 0 }: ChapterCardPr
         {/* Bottom border animation */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />
       </div>
-    </motion.a>
+      </Link>
+    </motion.div>
   );
 };
 
