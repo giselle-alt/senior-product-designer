@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
+import ChapterNavigation from '@/components/ChapterNavigation';
 
 const Chapter3 = () => {
   return (
@@ -313,30 +314,10 @@ const Chapter3 = () => {
           </motion.div>
 
           {/* Navigation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-20 pt-12 border-t border-border/30 flex justify-between items-center"
-          >
-            <Link 
-              to="/chapter2" 
-              className="group inline-flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              <div>
-                <span className="text-xs tracking-[0.2em] uppercase text-primary block mb-1">Previous Chapter</span>
-                <span className="text-lg font-serif">Fixing Navigation</span>
-              </div>
-            </Link>
-            <Link 
-              to="/" 
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              Back to Home
-            </Link>
-          </motion.div>
+          <ChapterNavigation 
+            prevChapter={{ path: '/chapter2', title: 'Fixing Navigation' }}
+            showHomeLink
+          />
         </article>
       </main>
 

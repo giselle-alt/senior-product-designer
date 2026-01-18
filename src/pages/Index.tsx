@@ -9,26 +9,35 @@ import FitnessAppSection from '@/components/FitnessAppSection';
 import EarlierWorkSection from '@/components/EarlierWorkSection';
 import Footer from '@/components/Footer';
 
+const INTRO_PLAYED_KEY = 'intro_played';
+
 const Index = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+  // Check if intro has already played this session
+  const hasIntroPlayed = sessionStorage.getItem(INTRO_PLAYED_KEY) === 'true';
+  const [isLoaded, setIsLoaded] = useState(hasIntroPlayed);
+  const [showContent, setShowContent] = useState(hasIntroPlayed);
   const { scrollYProgress } = useScroll();
   
   // Parallax effect for background elements
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
+  const handleIntroComplete = () => {
+    sessionStorage.setItem(INTRO_PLAYED_KEY, 'true');
+    setIsLoaded(true);
+  };
+
   useEffect(() => {
-    if (isLoaded) {
+    if (isLoaded && !showContent) {
       // Small delay before showing content for smooth transition
       const timer = setTimeout(() => setShowContent(true), 100);
       return () => clearTimeout(timer);
     }
-  }, [isLoaded]);
+  }, [isLoaded, showContent]);
 
   return (
     <div className="relative min-h-screen bg-background overflow-hidden">
-      {/* Intro loader */}
-      <IntroLoader onComplete={() => setIsLoaded(true)} />
+      {/* Intro loader - only show if not played yet */}
+      {!hasIntroPlayed && <IntroLoader onComplete={handleIntroComplete} />}
 
       {/* Noise texture overlay */}
       <div className="noise-overlay" />
