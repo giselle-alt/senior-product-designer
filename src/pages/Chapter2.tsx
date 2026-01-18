@@ -235,7 +235,7 @@ const Chapter2 = () => {
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Based on the test results, we implemented the explicit navigation labels: Live, Workouts, and Programs. The A/B test in production confirmed what we saw in usability testing—users found workouts faster and completed more sessions.
+              Based on the test results, we implemented the explicit navigation labels: Live, Workouts, and Programs. The A/B test in production confirmed what we saw in usability testing, users found workouts faster and completed more sessions.
             </p>
 
             <motion.figure

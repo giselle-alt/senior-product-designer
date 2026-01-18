@@ -279,7 +279,7 @@ const Chapter3 = () => {
             </p>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              This feature is still being experimented with, but early signs are promising. Users respond to the visual feedback, and it creates a low-pressure motivation to return—not because they have to, but because they don't want to break their streak.
+              This feature is still being experimented with, but early signs are promising. Users respond to the visual feedback, and it creates a low-pressure motivation to return, not because they have to, but because they don't want to break their streak.
             </p>
 
             <motion.figure
@@ -309,7 +309,7 @@ const Chapter3 = () => {
               <li><strong className="text-foreground">Reduce cognitive load:</strong> Users shouldn't have to remember where they were. Show them.</li>
               <li><strong className="text-foreground">Explicit beats implicit:</strong> "Continue Where You Left Off" works better than "My Programs" because it tells users exactly what to expect.</li>
               <li><strong className="text-foreground">Context before action:</strong> Users want to see what they're about to do before they commit, even when returning to something familiar.</li>
-              <li><strong className="text-foreground">Small rewards work:</strong> Streaks create motivation without pressure. It's not about punishment—it's about celebrating consistency.</li>
+              <li><strong className="text-foreground">Small rewards work:</strong> Streaks create motivation without pressure. It's not about punishment, it's about celebrating consistency.</li>
             </ul>
           </motion.div>
 
