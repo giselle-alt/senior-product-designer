@@ -48,7 +48,7 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                I do my best work in complex environments—when requirements are messy, constraints are real, and the path forward isn't obvious. That's where thoughtful design creates the most value.
+                I do my best work in complex environments, when requirements are messy, constraints are real, and the path forward isn't obvious. That's where thoughtful design creates the most value.
               </motion.p>
               
               <motion.p
@@ -77,7 +77,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1.5">•</span>
-                  <span>Thinking in systems, not screens—flows, logic, edge cases, and tradeoffs</span>
+                  <span>Thinking in systems, not screens, flows, logic, edge cases, and tradeoffs</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1.5">•</span>
@@ -112,7 +112,7 @@ const About = () => {
                 {/* TRX */}
                 <div className="group">
                   <h3 className="text-foreground font-medium text-xl mb-2">
-                    Senior Product Designer — Willdom @ TRX Training
+                    Senior Product Designer, Willdom @ TRX Training
                   </h3>
                   <p className="text-muted-foreground/70 text-sm mb-4">2022–Present</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
@@ -137,7 +137,7 @@ const About = () => {
                 {/* VIRTUALhaus */}
                 <div className="group">
                   <h3 className="text-foreground font-medium text-xl mb-2">
-                    Senior UX/UI Designer — VIRTUALhaus
+                    Senior UX/UI Designer, VIRTUALhaus
                   </h3>
                   <p className="text-muted-foreground/70 text-sm mb-4">2022</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
@@ -162,7 +162,7 @@ const About = () => {
                 {/* Itaú */}
                 <div className="group">
                   <h3 className="text-foreground font-medium text-xl mb-2">
-                    UX Designer — Itaú Unibanco
+                    UX Designer, Itaú Unibanco
                   </h3>
                   <p className="text-muted-foreground/70 text-sm mb-4">2021–2022</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
