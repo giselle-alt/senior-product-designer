@@ -30,7 +30,7 @@ const EarlierWorkSection = () => {
     {
       title: 'Visual Routine',
       year: '2019',
-      category: 'UX Research and UX/UI Design',
+      category: 'UX Research & Design',
       type: 'Smartwatch & Mobile app',
       image: 'https://www.gisellearbo.com/images/work3.png',
       href: 'https://www.behance.net/gallery/136506589/An-always-present-visual-routine',
