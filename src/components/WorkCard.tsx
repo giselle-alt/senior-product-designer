@@ -21,7 +21,7 @@ const WorkCard = ({ title, year, category, type, image, href, delay = 0 }: WorkC
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative block"
+      className="group relative block h-full"
     >
       <div className="relative overflow-hidden rounded-2xl border border-border/30 bg-card/30 transition-all duration-700 ease-out hover:border-primary/30 h-full flex flex-col">
         {/* Image container */}
