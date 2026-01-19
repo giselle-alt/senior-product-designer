@@ -23,9 +23,9 @@ const WorkCard = ({ title, year, category, type, image, href, delay = 0 }: WorkC
       transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
       className="group relative block"
     >
-      <div className="relative overflow-hidden rounded-2xl border border-border/30 bg-card/30 transition-all duration-700 ease-out hover:border-primary/30">
+      <div className="relative overflow-hidden rounded-2xl border border-border/30 bg-card/30 transition-all duration-700 ease-out hover:border-primary/30 h-full flex flex-col">
         {/* Image container */}
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
           <img
             src={image}
             alt={title}
@@ -42,7 +42,7 @@ const WorkCard = ({ title, year, category, type, image, href, delay = 0 }: WorkC
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           {/* Meta info */}
           <div className="flex items-center gap-3 mb-3">
             <span className="font-body text-xs tracking-widest uppercase text-primary">
@@ -58,6 +58,9 @@ const WorkCard = ({ title, year, category, type, image, href, delay = 0 }: WorkC
           <h4 className="font-display text-xl text-foreground mb-2 group-hover:text-primary transition-colors duration-500">
             {title}
           </h4>
+
+          {/* Spacer to push type to bottom */}
+          <div className="flex-grow" />
 
           {/* Type */}
           <p className="font-body text-sm text-muted-foreground">

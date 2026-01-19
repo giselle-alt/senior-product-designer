@@ -22,7 +22,7 @@ const ChapterCard = ({ number, title, subtitle, href, delay = 0 }: ChapterCardPr
         to={href}
         className="group relative block"
       >
-      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 md:p-10 transition-all duration-700 ease-out hover:border-primary/30 hover:bg-card/80">
+      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 md:p-10 transition-all duration-700 ease-out hover:border-primary/30 hover:bg-card/80 h-full flex flex-col">
         {/* Hover glow effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
           <div 
@@ -46,12 +46,15 @@ const ChapterCard = ({ number, title, subtitle, href, delay = 0 }: ChapterCardPr
         </h3>
 
         {/* Subtitle */}
-        <p className="relative font-body text-muted-foreground mb-8 leading-relaxed">
+        <p className="relative font-body text-muted-foreground leading-relaxed">
           {subtitle}
         </p>
 
+        {/* Spacer to push button to bottom */}
+        <div className="flex-grow" />
+
         {/* Arrow indicator */}
-        <div className="relative flex items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors duration-500">
+        <div className="relative flex items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors duration-500 mt-8">
           <span className="font-body text-sm">Read chapter</span>
           <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-500" />
         </div>
