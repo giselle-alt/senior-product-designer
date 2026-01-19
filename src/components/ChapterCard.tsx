@@ -17,10 +17,11 @@ const ChapterCard = ({ number, title, subtitle, href, delay = 0 }: ChapterCardPr
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      className="h-full"
     >
       <Link
         to={href}
-        className="group relative block"
+        className="group relative block h-full"
       >
       <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 md:p-10 transition-all duration-700 ease-out hover:border-primary/30 hover:bg-card/80 h-full flex flex-col">
         {/* Hover glow effect */}
