@@ -54,7 +54,7 @@ const Chapter3 = () => {
               Chapter 3
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Personalization & Habits
+              Helping users build habits
             </h1>
           </motion.div>
 
@@ -91,8 +91,12 @@ const Chapter3 = () => {
               <li>Where should I continue from?</li>
             </ul>
 
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Because the app didn't answer these questions clearly, many users abandoned programs, not because of low motivation, but because it was cognitively confusing to know what to do next.
+            </p>
+
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-              Because the app didn't answer these questions clearly, many users abandoned programs, not because of low motivation, but because it was cognitively confusing to know what to do next. These small moments of friction quietly killed motivation and often led to drop-off or unsubscribing.
+              These small moments of friction quietly killed motivation and often led to drop-off or unsubscribing.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl text-foreground mt-16 mb-6">
@@ -165,7 +169,7 @@ const Chapter3 = () => {
                 />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                Two title variants tested.
+                Two title variants tested
               </figcaption>
             </motion.figure>
 
@@ -202,7 +206,7 @@ const Chapter3 = () => {
                 />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                Two progress indicator variants tested.
+                Two progress indicator variants tested
               </figcaption>
             </motion.figure>
 
@@ -266,20 +270,33 @@ const Chapter3 = () => {
                 />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                Reset button placement variants tested.
+                Reset button placement variants tested
               </figcaption>
             </motion.figure>
 
+            <div className="cinematic-card p-6 mb-8">
+              <p className="text-foreground font-medium mb-2">Intent is real:</p>
+              <ul className="text-muted-foreground text-sm space-y-1">
+                <li>67–90% would reset after a long break</li>
+                <li>65–67% would reset to repeat a program they liked</li>
+                <li>Very few said they would never use this feature</li>
+              </ul>
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Resetting isn't frequent, but it's emotionally important. When the option is visible and clearly framed, users feel more confident starting over — without feeling like they've failed.
+            </p>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+              Showing progress clearly and giving users control over restarting made the app feel forgiving, supportive, and easier to return to, instead of intimidating or confusing.
+            </p>
+
             <h2 className="font-serif text-2xl md:text-3xl text-foreground mt-16 mb-6">
-              Feature 2: Streaks
+              Feature 2: Streaks (Still in testing)
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Streaks are a gamified nudge for consistency. The idea is simple: show users how many days in a row they've worked out, and give them a small reward for keeping the streak alive.
-            </p>
-
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              This feature is still being experimented with, but early signs are promising. Users respond to the visual feedback, and it creates a low-pressure motivation to return, not because they have to, but because they don't want to break their streak.
+              While "Continue Where You Left Off" helps users return after a break, streaks focus on consistency, the gentle nudge of "Did I show up this week?"
             </p>
 
             <motion.figure
@@ -292,30 +309,37 @@ const Chapter3 = () => {
               <div className="rounded-xl overflow-hidden border border-border/30">
                 <img 
                   src="https://www.gisellearbo.com/images/chapter3-img4.png" 
-                  alt="Streaks feature design"
+                  alt="Streaks feature"
                   className="w-full"
                 />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                Streaks feature currently in testing.
+                Three streak variants
               </figcaption>
             </motion.figure>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground mt-16 mb-6">
-              Key learnings
-            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              We're experimenting carefully. Poorly designed streaks can create pressure and guilt instead of motivation.
+            </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-              <li><strong className="text-foreground">Reduce cognitive load:</strong> Users shouldn't have to remember where they were. Show them.</li>
-              <li><strong className="text-foreground">Explicit beats implicit:</strong> "Continue Where You Left Off" works better than "My Programs" because it tells users exactly what to expect.</li>
-              <li><strong className="text-foreground">Context before action:</strong> Users want to see what they're about to do before they commit, even when returning to something familiar.</li>
-              <li><strong className="text-foreground">Small rewards work:</strong> Streaks create motivation without pressure. It's not about punishment, it's about celebrating consistency.</li>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              We created three streak designs plus a control with no streaks, exploring:
+            </p>
+
+            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
+              <li>How noticeable the streaks are</li>
+              <li>The tone (encouraging vs. performance-focused)</li>
+              <li>How missing a week is represented</li>
             </ul>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+              These experiments are currently running on iOS. Results are still pending.
+            </p>
           </motion.div>
 
           {/* Navigation */}
           <ChapterNavigation 
-            prevChapter={{ path: '/chapter2', title: 'Fixing Navigation' }}
+            prevChapter={{ path: '/chapter2', title: 'Fixing navigation' }}
             showHomeLink
           />
         </article>
