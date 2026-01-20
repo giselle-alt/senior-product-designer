@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ChapterNavigation from '@/components/ChapterNavigation';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 const Chapter2 = () => {
   return <div className="relative min-h-screen bg-background overflow-hidden">
       {/* Noise texture overlay */}
@@ -200,163 +202,162 @@ const Chapter2 = () => {
               Navigation variants
             </h2>
 
-            {/* V1 - Current */}
-            <motion.figure initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="my-12">
-              <div className="rounded-xl overflow-hidden border border-border/30">
-                <img src="https://www.gisellearbo.com/images/chapter2-img4.png" alt="V1: Current navigation" className="w-full" />
-              </div>
-              <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                V1: Current navigation (the baseline)
-              </figcaption>
-            </motion.figure>
+            <Tabs defaultValue="v1" className="w-full">
+              <TabsList className="w-full grid grid-cols-3 mb-8">
+                <TabsTrigger value="v1">V1: Current</TabsTrigger>
+                <TabsTrigger value="v2">V2: Explicit</TabsTrigger>
+                <TabsTrigger value="v3">V3: Conceptual</TabsTrigger>
+              </TabsList>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What worked
-            </h3>
+              {/* V1 - Current */}
+              <TabsContent value="v1">
+                <motion.figure
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="my-8"
+                >
+                  <div className="rounded-xl overflow-hidden border border-border/30">
+                    <img src="https://www.gisellearbo.com/images/chapter2-img4.png" alt="V1: Current navigation" className="w-full" />
+                  </div>
+                  <figcaption className="text-muted-foreground text-sm text-center mt-4">
+                    V1: Current navigation (the baseline)
+                  </figcaption>
+                </motion.figure>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Users correctly associated:
-            </p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What worked
+                </h3>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>Classes with workouts (89%).</li>
-              <li>Help with billing support (85%).</li>
-              <li>Profile with account settings (86%).</li>
-            </ul>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Users correctly associated:
+                </p>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What didn't work
-            </h3>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
+                  <li>Classes with workouts (89%).</li>
+                  <li>Help with billing support (85%).</li>
+                  <li>Profile with account settings (86%).</li>
+                </ul>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-              <li><strong className="text-foreground">Live vs on-demand confusion:</strong> Only 56% tapped Classes to join a live class; 29% went to On Demand, indicating unclear boundaries between live and recorded content.</li>
-              <li><strong className="text-foreground">Programs were not discoverable:</strong> Users split almost evenly between Classes (46%) and On Demand (40%) when looking for a multi-day program. Clear evidence of label overload.</li>
-              <li><strong className="text-foreground">Inefficient task completion:</strong> The HIIT task had the longest average completion time (173.6s) and the lowest in-flow success (31%), with very high misclick rates.</li>
-            </ul>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What didn't work
+                </h3>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              Conclusion
-            </h3>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
+                  <li><strong className="text-foreground">Live vs on-demand confusion:</strong> Only 56% tapped Classes to join a live class; 29% went to On Demand, indicating unclear boundaries between live and recorded content.</li>
+                  <li><strong className="text-foreground">Programs were not discoverable:</strong> Users split almost evenly between Classes (46%) and On Demand (40%) when looking for a multi-day program. Clear evidence of label overload.</li>
+                  <li><strong className="text-foreground">Inefficient task completion:</strong> The HIIT task had the longest average completion time (173.6s) and the lowest in-flow success (31%), with very high misclick rates.</li>
+                </ul>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              The current structure technically works, but relies heavily on user guessing rather than clear decision-making.
-            </p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  Conclusion
+                </h3>
 
-            {/* V2 - Explicit */}
-            <motion.figure initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="my-12">
-              <div className="rounded-xl overflow-hidden border border-border/30">
-                <img src="https://www.gisellearbo.com/images/chapter2-img5.png" alt="V2: Explicit content buckets" className="w-full" />
-              </div>
-              <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                V2: Explicit content buckets
-              </figcaption>
-            </motion.figure>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  The current structure technically works, but relies heavily on user guessing rather than clear decision-making.
+                </p>
+              </TabsContent>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What worked
-            </h3>
+              {/* V2 - Explicit */}
+              <TabsContent value="v2">
+                <motion.figure
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="my-8"
+                >
+                  <div className="rounded-xl overflow-hidden border border-border/30">
+                    <img src="https://www.gisellearbo.com/images/chapter2-img5.png" alt="V2: Explicit content buckets" className="w-full" />
+                  </div>
+                  <figcaption className="text-muted-foreground text-sm text-center mt-4">
+                    V2: Explicit content buckets
+                  </figcaption>
+                </motion.figure>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Strong label-to-task alignment across the board:
-            </p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What worked
+                </h3>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>Find a Yoga workout → Workouts (94%).</li>
-              <li>Find a Program → Programs (81%).</li>
-              <li>Live class → Live (94%).</li>
-              <li>Account changes → Account (97%).</li>
-              <li>Billing help → Support (90%)</li>
-            </ul>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  Strong label-to-task alignment across the board:
+                </p>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Faster and more confident decisions than the current navigation in most tasks.
-            </p>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
+                  <li>Find a Yoga workout → Workouts (94%).</li>
+                  <li>Find a Program → Programs (81%).</li>
+                  <li>Live class → Live (94%).</li>
+                  <li>Account changes → Account (97%).</li>
+                  <li>Billing help → Support (90%)</li>
+                </ul>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What didn't work
-            </h3>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  Faster and more confident decisions than the current navigation in most tasks.
+                </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-              <li>Despite clear labels, the HIIT task still showed a lower success rate (65.5%) and high misclicks, suggesting issues beyond top-level navigation (likely content layout or filtering) rather than label meaning</li>
-              <li>Some users noted overlap between Live and Workouts, indicating a mild mental-model conflict ("Live workouts are also workouts").</li>
-            </ul>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What didn't work
+                </h3>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              Conclusion
-            </h3>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
+                  <li>Despite clear labels, the HIIT task still showed a lower success rate (65.5%) and high misclicks, suggesting issues beyond top-level navigation (likely content layout or filtering) rather than label meaning</li>
+                  <li>Some users noted overlap between Live and Workouts, indicating a mild mental-model conflict ("Live workouts are also workouts").</li>
+                </ul>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Provided the clearest mental model overall. Explicit labels significantly reduced ambiguity, even if deeper IA still needs refinement.
-            </p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  Conclusion
+                </h3>
 
-            {/* V3 - Conceptual */}
-            <motion.figure initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="my-12">
-              <div className="rounded-xl overflow-hidden border border-border/30">
-                <img src="https://www.gisellearbo.com/images/chapter2-img6.png" alt="V3: Reduced tabs and conceptual labels" className="w-full" />
-              </div>
-              <figcaption className="text-muted-foreground text-sm text-center mt-4">
-                V3: Reduced tabs and conceptual labels
-              </figcaption>
-            </motion.figure>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Provided the clearest mental model overall. Explicit labels significantly reduced ambiguity, even if deeper IA still needs refinement.
+                </p>
+              </TabsContent>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What worked
-            </h3>
+              {/* V3 - Conceptual */}
+              <TabsContent value="v3">
+                <motion.figure
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="my-8"
+                >
+                  <div className="rounded-xl overflow-hidden border border-border/30">
+                    <img src="https://www.gisellearbo.com/images/chapter2-img6.png" alt="V3: Reduced tabs and conceptual labels" className="w-full" />
+                  </div>
+                  <figcaption className="text-muted-foreground text-sm text-center mt-4">
+                    V3: Reduced tabs and conceptual labels
+                  </figcaption>
+                </motion.figure>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>Live content clarity was excellent: 96% correctly chose Live Classes for real-time sessions.</li>
-              <li>Profile tasks were unambiguous: 93% correctly selected Profile for account changes.</li>
-              <li>Overall success rates were high for most tasks.</li>
-              <li>Account changes → Account (97%).</li>
-            </ul>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What worked
+                </h3>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              What didn't work
-            </h3>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
+                  <li>Live content clarity was excellent: 96% correctly chose Live Classes for real-time sessions.</li>
+                  <li>Profile tasks were unambiguous: 93% correctly selected Profile for account changes.</li>
+                  <li>Overall success rates were high for most tasks.</li>
+                  <li>Account changes → Account (97%).</li>
+                </ul>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-              <li><strong className="text-foreground">"Explore" was consistently ambiguous:</strong> Used correctly for programs (81%), but split heavily for workouts (44% Explore vs 52% Live Classes)</li>
-              <li>Qualitative feedback repeatedly flagged uncertainty around what Explore and For You contained.</li>
-              <li>HIIT and program tasks still showed very high misclick rates (≈75–79%), despite acceptable success rates, users eventually succeeded, but not confidently.</li>
-            </ul>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  What didn't work
+                </h3>
 
-            <h3 className="font-serif text-xl md:text-2xl text-foreground mt-12 mb-4">
-              Conclusion
-            </h3>
+                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
+                  <li><strong className="text-foreground">"Explore" was consistently ambiguous:</strong> Used correctly for programs (81%), but split heavily for workouts (44% Explore vs 52% Live Classes)</li>
+                  <li>Qualitative feedback repeatedly flagged uncertainty around what Explore and For You contained.</li>
+                  <li>HIIT and program tasks still showed very high misclick rates (≈75–79%), despite acceptable success rates, users eventually succeeded, but not confidently.</li>
+                </ul>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Reducing tabs improved simplicity, but abstract labels shifted the burden onto user interpretation, especially for first-time discovery.
-            </p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
+                  Conclusion
+                </h3>
+
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Reducing tabs improved simplicity, but abstract labels shifted the burden onto user interpretation, especially for first-time discovery.
+                </p>
+              </TabsContent>
+            </Tabs>
 
             <h2 className="font-serif text-2xl md:text-3xl text-foreground mt-16 mb-6">
               Hypotheses validation
