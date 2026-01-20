@@ -6,10 +6,8 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ChapterNavigation from '@/components/ChapterNavigation';
-
 const Chapter2 = () => {
-  return (
-    <div className="relative min-h-screen bg-background overflow-hidden">
+  return <div className="relative min-h-screen bg-background overflow-hidden">
       {/* Noise texture overlay */}
       <div className="noise-overlay" />
       
@@ -29,42 +27,51 @@ const Chapter2 = () => {
       <main className="relative z-20 pt-32 pb-24">
         <article className="max-w-3xl mx-auto px-6 md:px-12">
           {/* Back link */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Link 
-              to="/#work" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.6
+        }}>
+            <Link to="/#work" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group">
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm">Back to Portfolio</span>
             </Link>
           </motion.div>
 
           {/* Chapter header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-12"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.1
+        }} className="mb-12">
             <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
               Chapter 2
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Why I focused on navigation
+              Fixing navigation
             </h1>
           </motion.div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-lg prose-invert max-w-none"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }} className="prose prose-lg prose-invert max-w-none">
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               After understanding why people were leaving in Chapter 1, one pattern kept surfacing: people couldn't find what they were looking for. Before designing anything new, I stepped back to examine how content was organized and labeled.
             </p>
@@ -77,19 +84,19 @@ const Chapter2 = () => {
               I conducted a lightweight audit of the app's information architecture (IA) to understand how content was grouped and how users were expected to navigate.
             </p>
 
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img1.png" 
-                  alt="Current Information Architecture"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img1.png" alt="Current Information Architecture" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 Current information architecture
@@ -104,19 +111,19 @@ const Chapter2 = () => {
               Most of the app's content lived behind a few very broad entry points. The largest of these was On Demand. From a system perspective, this made content easier to manage. From a user's perspective, it meant guessing. Users had to tap into sections, scan the screen, and then decide whether they were in the right place; or back out and try again. I then looked at the tab bar itself and the labels we were using.
             </p>
 
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img2.png" 
-                  alt="Annotated tap bar"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img2.png" alt="Annotated tap bar" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 Current tap bar and labels.
@@ -143,19 +150,19 @@ const Chapter2 = () => {
               I ran a comparative usability test using Maze with 93 participants, testing three navigation variants head-to-head:
             </p>
 
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img3.png" 
-                  alt="Three tab bar variants tested"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img3.png" alt="Three tab bar variants tested" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 Three tab bar variants tested
@@ -194,19 +201,19 @@ const Chapter2 = () => {
             </h2>
 
             {/* V1 - Current */}
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img4.png" 
-                  alt="V1: Current navigation"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img4.png" alt="V1: Current navigation" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 V1: Current navigation (the baseline)
@@ -246,19 +253,19 @@ const Chapter2 = () => {
             </p>
 
             {/* V2 - Explicit */}
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img5.png" 
-                  alt="V2: Explicit content buckets"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img5.png" alt="V2: Explicit content buckets" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 V2: Explicit content buckets
@@ -303,19 +310,19 @@ const Chapter2 = () => {
             </p>
 
             {/* V3 - Conceptual */}
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img6.png" 
-                  alt="V3: Reduced tabs and conceptual labels"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img6.png" alt="V3: Reduced tabs and conceptual labels" className="w-full" />
               </div>
               <figcaption className="text-muted-foreground text-sm text-center mt-4">
                 V3: Reduced tabs and conceptual labels
@@ -392,19 +399,19 @@ const Chapter2 = () => {
               We kept the structure familiar, moved Programs to its own page, moved Help inside account, and changed labels to make the meaning of each tab obvious:
             </p>
 
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="my-12"
-            >
+            <motion.figure initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="my-12">
               <div className="rounded-xl overflow-hidden border border-border/30">
-                <img 
-                  src="https://www.gisellearbo.com/images/chapter2-img7.png" 
-                  alt="Final navigation implementation"
-                  className="w-full"
-                />
+                <img src="https://www.gisellearbo.com/images/chapter2-img7.png" alt="Final navigation implementation" className="w-full" />
               </div>
             </motion.figure>
 
@@ -442,16 +449,17 @@ const Chapter2 = () => {
           </motion.div>
 
           {/* Navigation */}
-          <ChapterNavigation 
-            prevChapter={{ path: '/chapter1', title: 'Finding the real problem' }}
-            nextChapter={{ path: '/chapter3', title: 'Personalization & habits' }}
-          />
+          <ChapterNavigation prevChapter={{
+          path: '/chapter1',
+          title: 'Finding the real problem'
+        }} nextChapter={{
+          path: '/chapter3',
+          title: 'Personalization & habits'
+        }} />
         </article>
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Chapter2;
