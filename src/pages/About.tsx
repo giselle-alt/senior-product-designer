@@ -3,10 +3,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
-
 const About = () => {
-  return (
-    <div className="relative min-h-screen bg-background overflow-hidden">
+  return <div className="relative min-h-screen bg-background overflow-hidden">
       {/* Noise texture overlay */}
       <div className="noise-overlay" />
       
@@ -25,48 +23,72 @@ const About = () => {
       {/* Main content */}
       <main className="relative z-20 pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }}>
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground mb-12">
               About
             </h1>
             
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
+              <motion.p initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.4
+            }}>
                 My work isn't flashy by accident. I design to solve real problems, align teams, and move products forward. I care less about trends and more about clarity, usability, and decisions that hold up under pressure.
               </motion.p>
               
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
+              <motion.p initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.5
+            }}>
                 I do my best work in complex environments, when requirements are messy, constraints are real, and the path forward isn't obvious. That's where thoughtful design creates the most value.
               </motion.p>
               
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
+              <motion.p initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.6
+            }}>
                 I approach product design as a problem-solving discipline: understanding the why, shaping the how, and making deliberate tradeoffs so teams can ship with confidence.
               </motion.p>
             </div>
 
             {/* What I'm good at */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="mt-16 pt-12 border-t border-border/30"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.7
+          }} className="mt-16 pt-12 border-t border-border/30">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
                 What I'm good at
               </h2>
@@ -99,12 +121,16 @@ const About = () => {
             </motion.div>
 
             {/* Selected experience */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-16 pt-12 border-t border-border/30"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.8
+          }} className="mt-16 pt-12 border-t border-border/30">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
                 Selected experience
               </h2>
@@ -118,20 +144,7 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     I lead product design across multiple TRX products, focusing on discovery, engagement, and scalability.
                   </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Increased video completion rate from 21% to 46% by redesigning discovery, filtering, and navigation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Built and maintained the TRX design system across products</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Established product analytics foundations and monthly dashboards using Indicative / mParticle to inform decisions</span>
-                    </li>
-                  </ul>
+                  
                 </div>
 
                 {/* VIRTUALhaus */}
@@ -143,20 +156,7 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     First design hire at a growth-stage startup, responsible for designing and shipping the MVP.
                   </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Defined and tested end-to-end user flows, from sign-up to 2D editing and 3D shop experiences</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Created and implemented the design system and UI guidelines</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Improved the 2D drawing experience through clearer interaction cues and visual communication</span>
-                    </li>
-                  </ul>
+                  
                 </div>
 
                 {/* Itaú */}
@@ -168,16 +168,7 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     Part of the Market Disruption team within a large financial institution, exploring new digital products.
                   </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Designed user flows for e-commerce, payment points, and small business POS solutions</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1.5">•</span>
-                      <span>Conducted heuristic evaluations and competitive benchmarking to identify UX gaps and opportunities</span>
-                    </li>
-                  </ul>
+                  
                 </div>
 
                 {/* Earlier experience */}
@@ -193,12 +184,16 @@ const About = () => {
             </motion.div>
 
             {/* Background */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="mt-16 pt-12 border-t border-border/30"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.9
+          }} className="mt-16 pt-12 border-t border-border/30">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
                 Background
               </h2>
@@ -209,12 +204,16 @@ const About = () => {
             </motion.div>
 
             {/* What you get */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              className="mt-16 pt-12 border-t border-border/30"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 1.0
+          }} className="mt-16 pt-12 border-t border-border/30">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
                 What you get working with me
               </h2>
@@ -234,12 +233,7 @@ const About = () => {
               </ul>
               <p className="text-muted-foreground text-lg leading-relaxed mt-8">
                 If you're looking for a designer who can think critically, work independently, and help teams move forward with confidence, the best way to reach me is on{' '}
-                <a
-                  href="https://www.linkedin.com/in/gisellearbo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/gisellearbo/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">
                   LinkedIn
                 </a>.
               </p>
@@ -249,8 +243,6 @@ const About = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
