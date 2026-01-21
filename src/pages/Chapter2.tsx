@@ -78,9 +78,11 @@ const Chapter2 = () => {
               After understanding why people were leaving in Chapter 1, one pattern kept surfacing: people couldn't find what they were looking for. Before designing anything new, I stepped back to examine how content was organized and labeled.
             </p>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              <strong className="text-foreground">My role:</strong> I led the information architecture audit, defined the navigation hypotheses, designed the tab bar variants, and ran usability testing. I partnered with product and engineering to ship the final navigation and validate it through an iOS A/B test.
-            </p>
+            <div className="cinematic-card p-6 mb-12">
+              <p className="text-foreground/80 text-sm">
+                <strong className="text-primary">My role:</strong> I led the information architecture audit, defined the navigation hypotheses, designed the tab bar variants, and ran usability testing. I partnered with product and engineering to ship the final navigation and validate it through an iOS A/B test.
+              </p>
+            </div>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               I conducted a lightweight audit of the app's information architecture (IA) to understand how content was grouped and how users were expected to navigate.
