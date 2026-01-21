@@ -85,10 +85,19 @@ const Chapter3 = () => {
               Instead of picking up where they left off, users often found themselves asking:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>What was I doing last time?</li>
-              <li>Did I already finish this workout?</li>
-              <li>Where should I continue from?</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>What was I doing last time?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Did I already finish this workout?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Where should I continue from?</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -111,10 +120,19 @@ const Chapter3 = () => {
               I designed this feature to help users resume exactly where they stopped. It surfaces:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>Programs they've already started</li>
-              <li>Clear progress indicators (for example, "8 of 13 workouts done")</li>
-              <li>A direct way to jump back into the next workout</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Programs they've already started</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Clear progress indicators (for example, "8 of 13 workouts done")</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>A direct way to jump back into the next workout</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
@@ -129,11 +147,23 @@ const Chapter3 = () => {
               During usability testing, I focused on four key questions:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-12 space-y-2">
-              <li>Do users recognize this section as their ongoing programs?</li>
-              <li>Can they resume quickly without getting lost?</li>
-              <li>How much effort does it take to start the next workout?</li>
-              <li>Do users feel confident and in control of their progress?</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-12">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Do users recognize this section as their ongoing programs?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Can they resume quickly without getting lost?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>How much effort does it take to start the next workout?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Do users feel confident and in control of their progress?</span>
+              </li>
             </ul>
 
             <h3 className="font-serif text-xl md:text-2xl text-foreground/90 mt-12 mb-4">
@@ -232,9 +262,15 @@ const Chapter3 = () => {
               Expectations after tapping the CTA were clear:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>75–89% of participants wanted to see workout details first (duration, equipment, difficulty)</li>
-              <li>Only 11–25% expected the workout to start playing immediately</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>75–89% of participants wanted to see workout details first (duration, equipment, difficulty)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Only 11–25% expected the workout to start playing immediately</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
@@ -326,10 +362,19 @@ const Chapter3 = () => {
               We created three streak designs plus a control with no streaks, exploring:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>How noticeable the streaks are</li>
-              <li>The tone (encouraging vs. performance-focused)</li>
-              <li>How missing a week is represented</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>How noticeable the streaks are</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>The tone (encouraging vs. performance-focused)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>How missing a week is represented</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">

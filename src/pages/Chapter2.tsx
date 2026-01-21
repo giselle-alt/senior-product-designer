@@ -175,11 +175,23 @@ const Chapter2 = () => {
               Participants were given a prototype and asked to complete four tasks:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>Start a HIIT workout</li>
-              <li>Begin a 2-week beginner program</li>
-              <li>Update their profile photo</li>
-              <li>Contact support</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Start a HIIT workout</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Begin a 2-week beginner program</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Update their profile photo</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Contact support</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -233,20 +245,38 @@ const Chapter2 = () => {
                   Users correctly associated:
                 </p>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-                  <li>Classes with workouts (89%).</li>
-                  <li>Help with billing support (85%).</li>
-                  <li>Profile with account settings (86%).</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Classes with workouts (89%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Help with billing support (85%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Profile with account settings (86%).</span>
+                  </li>
                 </ul>
 
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
                   What didn't work
                 </h3>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-                  <li><strong className="text-foreground">Live vs on-demand confusion:</strong> Only 56% tapped Classes to join a live class; 29% went to On Demand, indicating unclear boundaries between live and recorded content.</li>
-                  <li><strong className="text-foreground">Programs were not discoverable:</strong> Users split almost evenly between Classes (46%) and On Demand (40%) when looking for a multi-day program. Clear evidence of label overload.</li>
-                  <li><strong className="text-foreground">Inefficient task completion:</strong> The HIIT task had the longest average completion time (173.6s) and the lowest in-flow success (31%), with very high misclick rates.</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span><strong className="text-foreground">Live vs on-demand confusion:</strong> Only 56% tapped Classes to join a live class; 29% went to On Demand, indicating unclear boundaries between live and recorded content.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span><strong className="text-foreground">Programs were not discoverable:</strong> Users split almost evenly between Classes (46%) and On Demand (40%) when looking for a multi-day program. Clear evidence of label overload.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span><strong className="text-foreground">Inefficient task completion:</strong> The HIIT task had the longest average completion time (173.6s) and the lowest in-flow success (31%), with very high misclick rates.</span>
+                  </li>
                 </ul>
 
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
@@ -282,12 +312,27 @@ const Chapter2 = () => {
                   Strong label-to-task alignment across the board:
                 </p>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-                  <li>Find a Yoga workout → Workouts (94%).</li>
-                  <li>Find a Program → Programs (81%).</li>
-                  <li>Live class → Live (94%).</li>
-                  <li>Account changes → Account (97%).</li>
-                  <li>Billing help → Support (90%)</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Find a Yoga workout → Workouts (94%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Find a Program → Programs (81%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Live class → Live (94%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Account changes → Account (97%).</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Billing help → Support (90%)</span>
+                  </li>
                 </ul>
 
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -298,9 +343,15 @@ const Chapter2 = () => {
                   What didn't work
                 </h3>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-                  <li>Despite clear labels, the HIIT task still showed a lower success rate (65.5%) and high misclicks, suggesting issues beyond top-level navigation (likely content layout or filtering) rather than label meaning</li>
-                  <li>Some users noted overlap between Live and Workouts, indicating a mild mental-model conflict ("Live workouts are also workouts").</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Despite clear labels, the HIIT task still showed a lower success rate (65.5%) and high misclicks, suggesting issues beyond top-level navigation (likely content layout or filtering) rather than label meaning</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Some users noted overlap between Live and Workouts, indicating a mild mental-model conflict ("Live workouts are also workouts").</span>
+                  </li>
                 </ul>
 
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
@@ -332,21 +383,42 @@ const Chapter2 = () => {
                   What worked
                 </h3>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-                  <li>Live content clarity was excellent: 96% correctly chose Live Classes for real-time sessions.</li>
-                  <li>Profile tasks were unambiguous: 93% correctly selected Profile for account changes.</li>
-                  <li>Overall success rates were high for most tasks.</li>
-                  <li>Account changes → Account (97%).</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Live content clarity was excellent: 96% correctly chose Live Classes for real-time sessions.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Profile tasks were unambiguous: 93% correctly selected Profile for account changes.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Overall success rates were high for most tasks.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Account changes → Account (97%).</span>
+                  </li>
                 </ul>
 
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">
                   What didn't work
                 </h3>
 
-                <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-4">
-                  <li><strong className="text-foreground">"Explore" was consistently ambiguous:</strong> Used correctly for programs (81%), but split heavily for workouts (44% Explore vs 52% Live Classes)</li>
-                  <li>Qualitative feedback repeatedly flagged uncertainty around what Explore and For You contained.</li>
-                  <li>HIIT and program tasks still showed very high misclick rates (≈75–79%), despite acceptable success rates, users eventually succeeded, but not confidently.</li>
+                <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span><strong className="text-foreground">"Explore" was consistently ambiguous:</strong> Used correctly for programs (81%), but split heavily for workouts (44% Explore vs 52% Live Classes)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>Qualitative feedback repeatedly flagged uncertainty around what Explore and For You contained.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1.5">•</span>
+                    <span>HIIT and program tasks still showed very high misclick rates (≈75–79%), despite acceptable success rates, users eventually succeeded, but not confidently.</span>
+                  </li>
                 </ul>
 
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-8 mb-4">

@@ -118,11 +118,23 @@ const Chapter1 = () => {
               When everything was grouped together, a clear pattern showed up. People were not saying the workouts were bad or the trainers were bad. They were saying things like:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-8 space-y-2">
-              <li>They couldn't find what they were looking for.</li>
-              <li>The app felt overwhelming.</li>
-              <li>They just wanted to start a simple workout.</li>
-              <li>They gave up and looked somewhere else.</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>They couldn't find what they were looking for.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>The app felt overwhelming.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>They just wanted to start a simple workout.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>They gave up and looked somewhere else.</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -250,10 +262,19 @@ const Chapter1 = () => {
               The sketches, ideas, and final report helped my team get approval to:
             </p>
 
-            <ul className="text-muted-foreground text-lg leading-relaxed mb-12 space-y-2">
-              <li>Update the app's tab navigation.</li>
-              <li>Add a more personalized home experience.</li>
-              <li>Introduce basic habit-building features, like streaks.</li>
+            <ul className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-12">
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Update the app's tab navigation.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Add a more personalized home experience.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1.5">•</span>
+                <span>Introduce basic habit-building features, like streaks.</span>
+              </li>
             </ul>
 
             <p className="text-muted-foreground text-lg leading-relaxed">
