@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ChapterNavigation from '@/components/ChapterNavigation';
+import TableOfContents from '@/components/TableOfContents';
 
 const Chapter3 = () => {
   return (
@@ -24,6 +25,9 @@ const Chapter3 = () => {
 
       {/* Navigation */}
       <Navigation />
+
+      {/* Table of Contents */}
+      <TableOfContents />
 
       {/* Main content */}
       <main className="relative z-20 pt-32 pb-24">
