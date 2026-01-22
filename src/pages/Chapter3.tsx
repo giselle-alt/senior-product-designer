@@ -44,7 +44,7 @@ const Chapter3 = () => {
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              <span className="text-sm">Back to Portfolio</span>
+              <span className="text-sm">Back to Home</span>
             </Link>
           </motion.div>
 
