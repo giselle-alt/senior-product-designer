@@ -50,7 +50,7 @@ const Chapter2 = () => {
           </motion.div>
 
           {/* Two-column header layout */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12 mb-12">
             {/* Left: Chapter title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
