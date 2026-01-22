@@ -21,9 +21,6 @@ const ChapterHeader = ({ client, role, date, tools }: ChapterHeaderProps) => {
       className="w-full"
     >
       <div className="p-4 rounded-lg bg-background/50 backdrop-blur-sm border border-border/20">
-        <h3 className="text-xs font-medium text-primary uppercase tracking-wider mb-4">
-          Project Details
-        </h3>
         
         {/* Metadata list */}
         <div className="space-y-3">
