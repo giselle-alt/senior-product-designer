@@ -98,7 +98,7 @@ const Chapter1 = () => {
 
             <div className="cinematic-card p-6 mb-12">
               <p className="text-foreground/80 text-sm">
-                <strong className="text-primary">My role:</strong> As the Senior UX/UI Designer on this project, I led the design work from start to finish. I conducted user research, analyzed feedback, framed the problem, created sketches and wireframes, and proposed solutions for faster workout discovery and improved navigation. I collaborated with PMs and engineers to ensure changes were feasible and aligned with business goals.
+                <strong className="text-primary">My role:</strong> On this project, I led the design work from start to finish. I conducted user research, analyzed feedback, framed the problem, created sketches and wireframes, and proposed solutions for faster workout discovery and improved navigation. I collaborated with PMs and engineers to ensure changes were feasible and aligned with business goals.
               </p>
             </div>
 
