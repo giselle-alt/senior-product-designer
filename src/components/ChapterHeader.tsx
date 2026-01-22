@@ -17,8 +17,9 @@ const ChapterHeader = ({ client, role, date, tools }: ChapterHeaderProps) => {
     >
       {/* Primary metadata row */}
       <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-0 mb-3">
-        <span className="text-primary font-medium text-sm md:text-base">
-          {client}
+        <span className="text-sm md:text-base">
+          <span className="text-muted-foreground/70">Client: </span>
+          <span className="text-primary font-medium">{client}</span>
         </span>
         <span className="text-muted-foreground/50 mx-2 hidden md:inline">·</span>
         <span className="text-muted-foreground text-sm">
