@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import TableOfContents from '@/components/TableOfContents';
+import aiChallengingAssumptions from '@/assets/ai-challenging-assumptions.png';
 
 const BlogPost1 = () => {
   return (
@@ -118,6 +119,20 @@ const BlogPost1 = () => {
               <p className="text-foreground/80 leading-relaxed mb-6">
                 Once I've framed a problem, I often use AI as <em>MY WORST ENEMY</em> (kidding… more like a counterpart, or I'll ask it to pretend to be "that stakeholder who always contradicts my ideas").
               </p>
+
+              <motion.figure
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="my-8"
+              >
+                <img 
+                  src={aiChallengingAssumptions} 
+                  alt="AI helping challenge design assumptions" 
+                  className="w-full rounded-lg"
+                />
+              </motion.figure>
 
               <p className="text-foreground/80 leading-relaxed mb-6">
                 For example I'll ask it to:
