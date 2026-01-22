@@ -7,6 +7,7 @@ import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ChapterNavigation from '@/components/ChapterNavigation';
 import TableOfContents from '@/components/TableOfContents';
+import ChapterHeader from '@/components/ChapterHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Chapter2 = () => {
@@ -47,6 +48,14 @@ const Chapter2 = () => {
               <span className="text-sm">Back to Portfolio</span>
             </Link>
           </motion.div>
+
+          {/* Project context header */}
+          <ChapterHeader
+            client="TRX App"
+            role="Senior Product Designer"
+            date="Apr 2025 – May 2025"
+            tools={['Figma', 'Maze', 'Claude AI']}
+          />
 
           {/* Chapter header */}
           <motion.div initial={{

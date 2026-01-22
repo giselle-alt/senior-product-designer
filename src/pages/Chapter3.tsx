@@ -7,6 +7,7 @@ import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ChapterNavigation from '@/components/ChapterNavigation';
 import TableOfContents from '@/components/TableOfContents';
+import ChapterHeader from '@/components/ChapterHeader';
 
 const Chapter3 = () => {
   return (
@@ -46,6 +47,14 @@ const Chapter3 = () => {
               <span className="text-sm">Back to Portfolio</span>
             </Link>
           </motion.div>
+
+          {/* Project context header */}
+          <ChapterHeader
+            client="TRX App"
+            role="Senior Product Designer"
+            date="Sep 2025 – Nov 2025"
+            tools={['Figma', 'Maze', 'ChatGPT', 'MidJourney']}
+          />
 
           {/* Chapter header */}
           <motion.div
