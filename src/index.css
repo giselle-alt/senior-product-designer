@@ -248,6 +248,36 @@
     }
   }
 
+  /* Holographic card effects */
+  @keyframes holo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes holo-pulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes holo-scanlines {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
   /* Noise texture overlay */
   .noise-overlay {
     position: fixed;
