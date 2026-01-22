@@ -6,10 +6,10 @@ import CursorGlow from '@/components/CursorGlow';
 import BlogPostCard from '@/components/BlogPostCard';
 const blogPosts = [{
   id: 1,
-  title: "How AI is Reshaping the Design Process",
+  title: "How I actually use AI as a product designer (end to end)",
   category: "AI in design",
   image: "/placeholder.svg",
-  href: "/blog/ai-reshaping-design",
+  href: "/blog/ai-product-designer",
   featured: true
 }, {
   id: 2,

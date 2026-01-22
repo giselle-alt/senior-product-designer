@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import BlogPost1 from "./pages/BlogPost1";
 import Chapter1 from "./pages/Chapter1";
 import Chapter2 from "./pages/Chapter2";
 import Chapter3 from "./pages/Chapter3";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/ai-product-designer" element={<BlogPost1 />} />
           <Route path="/chapter1" element={<Chapter1 />} />
           <Route path="/chapter2" element={<Chapter2 />} />
           <Route path="/chapter3" element={<Chapter3 />} />
