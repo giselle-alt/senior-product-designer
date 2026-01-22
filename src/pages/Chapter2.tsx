@@ -49,32 +49,37 @@ const Chapter2 = () => {
             </Link>
           </motion.div>
 
-          {/* Project context header */}
-          <ChapterHeader
-            client="TRX App"
-            role="Senior Product Designer"
-            date="Apr 2025 – May 2025"
-            tools={['Figma', 'Maze', 'Claude AI']}
-          />
+          {/* Two-column header layout */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
+            {/* Left: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Apr 2025 – May 2025"
+                tools={[
+                  { name: 'Figma', description: 'high-fi prototypes and final designs' },
+                  { name: 'Maze', description: 'task-based usability testing' },
+                  { name: 'Claude AI', description: 'copy/UX microcopy' }
+                ]}
+              />
+            </aside>
 
-          {/* Chapter header */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.1
-        }} className="mb-12">
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-              Chapter 2
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Fixing navigation
-            </h1>
-          </motion.div>
+            {/* Right: Chapter title */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="flex-1"
+            >
+              <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
+                Chapter 2
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+                Fixing navigation
+              </h1>
+            </motion.div>
+          </div>
 
           {/* Content */}
           <motion.div initial={{
