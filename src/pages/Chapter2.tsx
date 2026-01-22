@@ -51,21 +51,7 @@ const Chapter2 = () => {
 
           {/* Two-column header layout */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
-            {/* Left: Project metadata */}
-            <aside className="lg:w-64 flex-shrink-0">
-              <ChapterHeader
-                client="TRX App"
-                role="Senior Product Designer"
-                date="Apr 2025 – May 2025"
-                tools={[
-                  { name: 'Figma', description: 'high-fi prototypes and final designs' },
-                  { name: 'Maze', description: 'task-based usability testing' },
-                  { name: 'Claude AI', description: 'copy/UX microcopy' }
-                ]}
-              />
-            </aside>
-
-            {/* Right: Chapter title */}
+            {/* Left: Chapter title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,6 +65,20 @@ const Chapter2 = () => {
                 Fixing navigation
               </h1>
             </motion.div>
+
+            {/* Right: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Apr 2025 – May 2025"
+                tools={[
+                  { name: 'Figma', description: 'high-fi prototypes and final designs' },
+                  { name: 'Maze', description: 'task-based usability testing' },
+                  { name: 'Claude AI', description: 'copy/UX microcopy' }
+                ]}
+              />
+            </aside>
           </div>
 
           {/* Content */}

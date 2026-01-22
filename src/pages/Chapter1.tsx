@@ -50,22 +50,7 @@ const Chapter1 = () => {
 
           {/* Two-column header layout */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
-            {/* Left: Project metadata */}
-            <aside className="lg:w-64 flex-shrink-0">
-              <ChapterHeader
-                client="TRX App"
-                role="Senior Product Designer"
-                date="Nov 2024 – Dec 2024"
-                tools={[
-                  { name: 'Jotform', description: 'surveys' },
-                  { name: 'Google Sheets', description: 'feedback aggregation' },
-                  { name: 'Figma', description: 'wireframes and stakeholder presentations' },
-                  { name: 'ChatGPT', description: 'research synthesis' }
-                ]}
-              />
-            </aside>
-
-            {/* Right: Chapter title */}
+            {/* Left: Chapter title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,6 +64,21 @@ const Chapter1 = () => {
                 The Problem
               </h1>
             </motion.div>
+
+            {/* Right: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Nov 2024 – Dec 2024"
+                tools={[
+                  { name: 'Jotform', description: 'surveys' },
+                  { name: 'Google Sheets', description: 'feedback aggregation' },
+                  { name: 'Figma', description: 'wireframes and stakeholder presentations' },
+                  { name: 'ChatGPT', description: 'research synthesis' }
+                ]}
+              />
+            </aside>
           </div>
 
           {/* Content */}

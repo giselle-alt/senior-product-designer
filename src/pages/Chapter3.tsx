@@ -50,22 +50,7 @@ const Chapter3 = () => {
 
           {/* Two-column header layout */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
-            {/* Left: Project metadata */}
-            <aside className="lg:w-64 flex-shrink-0">
-              <ChapterHeader
-                client="TRX App"
-                role="Senior Product Designer"
-                date="Sep 2025 – Nov 2025"
-                tools={[
-                  { name: 'Figma', description: 'interactive prototypes and design updates' },
-                  { name: 'Maze', description: 'A/B testing' },
-                  { name: 'ChatGPT', description: 'idea challenger' },
-                  { name: 'MidJourney', description: 'moodboards and visual experimentation' }
-                ]}
-              />
-            </aside>
-
-            {/* Right: Chapter title */}
+            {/* Left: Chapter title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,6 +64,21 @@ const Chapter3 = () => {
                 Helping users build habits
               </h1>
             </motion.div>
+
+            {/* Right: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Sep 2025 – Nov 2025"
+                tools={[
+                  { name: 'Figma', description: 'interactive prototypes and design updates' },
+                  { name: 'Maze', description: 'A/B testing' },
+                  { name: 'ChatGPT', description: 'idea challenger' },
+                  { name: 'MidJourney', description: 'moodboards and visual experimentation' }
+                ]}
+              />
+            </aside>
           </div>
 
           {/* Content */}
