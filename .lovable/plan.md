@@ -1,98 +1,107 @@
 
-# Blog Page Structure Implementation Plan
+
+# Chapter Header Component Implementation Plan
 
 ## Overview
-Transform the current "under construction" blog page into a fully functional, responsive blog grid layout. The design will incorporate the same holographic hover effects used on the homepage chapter cards, maintaining visual consistency across the site.
+Create a new reusable `ChapterHeader` component that displays project context (Client, Role, Date, and Tools Used) at the top of each chapter page, positioned between the back link and the chapter title.
+
+---
+
+## Component Design
+
+### Visual Structure
+```text
++------------------------------------------------------------------+
+|  TRX App  ·  Senior Product Designer  ·  Nov 2024 – Dec 2024     |
+|                                                                   |
+|  Tools Used: Jotform, Google Sheets, Figma, ChatGPT              |
++------------------------------------------------------------------+
+                    ↓ subtle divider line ↓
++------------------------------------------------------------------+
+|  CHAPTER 1                                                        |
+|  The Problem                                                      |
++------------------------------------------------------------------+
+```
+
+### Styling Approach
+- **Client**: Bold or primary accent color (`text-primary font-medium`)
+- **Role & Date**: Secondary weight/size (`text-muted-foreground text-sm`)
+- **Separator dots**: Subtle middle-dot character (·) between metadata items
+- **Tools Used**: Smaller text, displayed on a second line, optional display
+- **Divider**: Thin line using `border-border/30` below the header block
+- **Responsive**: Stack elements vertically on mobile, inline on desktop
 
 ---
 
 ## Implementation Steps
 
-### 1. Create BlogPostCard Component
-**New file:** `src/components/BlogPostCard.tsx`
+### 1. Create ChapterHeader Component
+**New file:** `src/components/ChapterHeader.tsx`
 
-A reusable card component for individual blog posts with:
-- **Props interface:**
-  - `title` (string) - Post title
-  - `category` (string) - One of: "AI in design", "Data-informed design", "Decision-making", "Product thinking"
-  - `image` (string) - Thumbnail image URL
-  - `href` (string) - Link to the blog post
-  - `delay` (number, optional) - Animation stagger delay
-  - `featured` (boolean, optional) - For potential future styling of featured posts
-
-- **Visual structure:**
-  - Thumbnail image with 4:3 or 16:10 aspect ratio
-  - Category label (styled as a badge with primary accent color)
-  - Title below the image
-  - Consistent with existing card styling (rounded-2xl, border styling)
-
-- **Hover effects:**
-  - Holographic projection effect (same as ChapterCard)
-  - Shimmer ring, pulsing glow, scan lines, floating particles
-  - Desktop-only using `hidden md:block`
-  - Card glow shadow on hover
-  - Image subtle scale transform
-
-- **Animations:**
-  - Framer Motion entrance animation (fade + slide up)
-  - Staggered delays for grid items
-
----
-
-### 2. Update Blog Page
-**File:** `src/pages/Blog.tsx`
-
-**Changes:**
-- Remove the "Coming Soon" cinematic-card section
-- Expand container width from `max-w-4xl` to `max-w-7xl` for the grid
-- Add placeholder blog posts data array with 6-9 sample posts
-- Implement responsive grid layout:
-  ```
-  grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-  ```
-- Maintain existing page structure (Navigation, Footer, particles, effects)
-
-**Placeholder data structure:**
+**Props interface:**
 ```typescript
-const blogPosts = [
-  {
-    id: 1,
-    title: "Placeholder Post Title",
-    category: "AI in design",
-    image: "/placeholder.svg",
-    href: "/blog/post-slug",
-    featured: true,
-  },
-  // ... more posts
-];
+interface ChapterHeaderProps {
+  client: string;
+  role: string;
+  date: string;
+  tools?: string[];  // Optional array for future flexibility
+}
 ```
 
+**Component structure:**
+- Framer Motion wrapper for consistent entrance animation
+- Flex layout with responsive stacking
+- Client emphasized with `text-primary` or `font-medium`
+- Role and Date in `text-muted-foreground text-sm`
+- Tools displayed on a separate line with label
+- Bottom border as subtle divider (`border-b border-border/30 pb-8 mb-8`)
+
+### 2. Update Chapter Pages
+**Files to modify:**
+- `src/pages/Chapter1.tsx`
+- `src/pages/Chapter2.tsx`
+- `src/pages/Chapter3.tsx`
+
+**Changes:**
+- Import the new `ChapterHeader` component
+- Insert it after the back link, before the existing chapter header
+- Pass the specific data for each chapter:
+
+| Chapter | Client | Role | Date | Tools |
+|---------|--------|------|------|-------|
+| Chapter 1 | TRX App | Senior Product Designer | Nov 2024 – Dec 2024 | Jotform, Google Sheets, Figma, ChatGPT |
+| Chapter 2 | TRX App | Senior Product Designer | Apr 2025 – May 2025 | Figma, Maze, Claude AI |
+| Chapter 3 | TRX App | Senior Product Designer | Sep 2025 – Nov 2025 | Figma, Maze, ChatGPT, MidJourney |
+
 ---
 
-### 3. Category Badge Styling
-Use the existing Badge component or create inline styling:
-- Background: `bg-primary/10` or `bg-card`
-- Text: `text-primary` with uppercase tracking
-- Small, pill-shaped design
-- Categories: "AI in design", "Data-informed design", "Decision-making", "Product thinking"
+## Responsive Behavior
+
+| Breakpoint | Layout |
+|------------|--------|
+| Mobile (<768px) | Stack vertically: Client on first line, Role on second line, Date on third line, Tools below |
+| Desktop (768px+) | Inline with dot separators: `Client · Role · Date` with Tools below |
 
 ---
 
-### 4. Responsive Grid Specifications
+## Typography Hierarchy
 
-| Breakpoint | Columns | Gap |
-|------------|---------|-----|
-| Mobile (<768px) | 1 column | 24px (gap-6) |
-| Tablet (768px-1024px) | 2 columns | 24px (gap-6) |
-| Desktop (>1024px) | 3 columns | 32px (gap-8) |
+| Element | Classes |
+|---------|---------|
+| Client | `text-primary font-medium text-sm md:text-base` |
+| Role | `text-muted-foreground text-sm` |
+| Date | `text-muted-foreground text-sm` |
+| Separator | `text-muted-foreground/50 mx-2 hidden md:inline` |
+| Tools Label | `text-muted-foreground/70 text-xs uppercase tracking-wider` |
+| Tools List | `text-muted-foreground text-xs md:text-sm` |
+| Divider | `border-b border-border/30` |
 
 ---
 
-### 5. Typography Hierarchy
-- **Page title:** `font-serif text-4xl md:text-6xl lg:text-7xl` (existing)
-- **Page subtitle:** `text-muted-foreground text-lg` (existing)
-- **Card title:** `font-display text-xl md:text-2xl`
-- **Category label:** `text-xs uppercase tracking-widest text-primary`
+## Animation
+- Use Framer Motion consistent with existing page animations
+- Animate in with `opacity: 0 → 1` and `y: 20 → 0`
+- Delay slightly after the back link animation (delay: 0.05s or 0.1s)
 
 ---
 
@@ -100,48 +109,16 @@ Use the existing Badge component or create inline styling:
 
 | File | Action |
 |------|--------|
-| `src/components/BlogPostCard.tsx` | Create new |
-| `src/pages/Blog.tsx` | Modify |
+| `src/components/ChapterHeader.tsx` | Create new |
+| `src/pages/Chapter1.tsx` | Modify - add ChapterHeader |
+| `src/pages/Chapter2.tsx` | Modify - add ChapterHeader |
+| `src/pages/Chapter3.tsx` | Modify - add ChapterHeader |
 
 ---
 
-## Visual Reference
+## Future Extensibility
+The component will be designed to easily accommodate additional fields:
+- **Outcome/Impact**: Add an optional `outcome` prop
+- **Additional metadata**: The props interface can be extended without breaking existing usage
+- **Conditional rendering**: Tools section already optional via the `tools?` prop
 
-The BlogPostCard will follow this structure:
-
-```text
-+----------------------------------+
-|                                  |
-|         [Thumbnail Image]        |
-|          aspect-[4/3]            |
-|                                  |
-+----------------------------------+
-|  [Category Badge]                |
-|                                  |
-|  Post Title Here                 |
-|  (2-3 lines max)                 |
-|                                  |
-+----------------------------------+
-```
-
-The grid layout on desktop:
-
-```text
-+----------+  +----------+  +----------+
-|  Post 1  |  |  Post 2  |  |  Post 3  |
-| (Latest) |  |          |  |          |
-+----------+  +----------+  +----------+
-
-+----------+  +----------+  +----------+
-|  Post 4  |  |  Post 5  |  |  Post 6  |
-|          |  |          |  |          |
-+----------+  +----------+  +----------+
-```
-
----
-
-## Notes
-- Placeholder images will use `/placeholder.svg` or similar
-- Links will point to placeholder routes (e.g., `/blog/post-1`)
-- The holographic effect is identical to ChapterCard implementation
-- Animation delays will be staggered (0.1s increments) for visual polish
