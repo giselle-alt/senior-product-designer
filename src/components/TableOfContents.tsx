@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface TocItem {
   id: string;
@@ -9,6 +9,7 @@ interface TocItem {
 const TableOfContents = () => {
   const [tocItems, setTocItems] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
+  const [isVisible, setIsVisible] = useState(false);
 
   // Find all h2 elements and build TOC
   useEffect(() => {
@@ -52,10 +53,17 @@ const TableOfContents = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Track scroll position to highlight active section
+  // Track scroll position to highlight active section and control visibility
   useEffect(() => {
     const handleScroll = () => {
       const headings = tocItems.map(item => document.getElementById(item.id));
+      
+      // Check if we've scrolled past the first h2
+      const firstHeading = headings[0];
+      if (firstHeading) {
+        const rect = firstHeading.getBoundingClientRect();
+        setIsVisible(rect.top <= 150);
+      }
       
       let currentId = '';
       for (const heading of headings) {
@@ -93,34 +101,39 @@ const TableOfContents = () => {
   if (tocItems.length === 0) return null;
 
   return (
-    <motion.nav
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.4 }}
-      className="hidden lg:block fixed right-8 xl:right-16 top-1/2 -translate-y-1/2 z-30 max-w-[200px]"
-    >
-      <div className="p-4 rounded-lg bg-background/50 backdrop-blur-sm border border-border/20">
-        <p className="text-xs font-medium text-primary uppercase tracking-wider mb-3">
-          On this page
-        </p>
-        <ul className="space-y-2">
-          {tocItems.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={() => scrollToSection(item.id)}
-                className={`text-left text-sm leading-tight transition-colors duration-200 block w-full ${
-                  activeId === item.id
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                {item.text}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </motion.nav>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.nav
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 20 }}
+          transition={{ duration: 0.4 }}
+          className="hidden lg:block fixed right-8 xl:right-16 top-32 z-30 max-w-[200px]"
+        >
+          <div className="p-4 rounded-lg bg-background/50 backdrop-blur-sm border border-border/20">
+            <p className="text-xs font-medium text-primary uppercase tracking-wider mb-3">
+              On this page
+            </p>
+            <ul className="space-y-2">
+              {tocItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className={`text-left text-sm leading-tight transition-colors duration-200 block w-full ${
+                      activeId === item.id
+                        ? 'text-primary'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    {item.text}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.nav>
+      )}
+    </AnimatePresence>
   );
 };
 
