@@ -48,28 +48,38 @@ const Chapter3 = () => {
             </Link>
           </motion.div>
 
-          {/* Project context header */}
-          <ChapterHeader
-            client="TRX App"
-            role="Senior Product Designer"
-            date="Sep 2025 – Nov 2025"
-            tools={['Figma', 'Maze', 'ChatGPT', 'MidJourney']}
-          />
+          {/* Two-column header layout */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
+            {/* Left: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Sep 2025 – Nov 2025"
+                tools={[
+                  { name: 'Figma', description: 'interactive prototypes and design updates' },
+                  { name: 'Maze', description: 'A/B testing' },
+                  { name: 'ChatGPT', description: 'idea challenger' },
+                  { name: 'MidJourney', description: 'moodboards and visual experimentation' }
+                ]}
+              />
+            </aside>
 
-          {/* Chapter header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-12"
-          >
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-              Chapter 3
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Helping users build habits
-            </h1>
-          </motion.div>
+            {/* Right: Chapter title */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="flex-1"
+            >
+              <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
+                Chapter 3
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+                Helping users build habits
+              </h1>
+            </motion.div>
+          </div>
 
           {/* Content */}
           <motion.div

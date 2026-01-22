@@ -48,28 +48,38 @@ const Chapter1 = () => {
             </Link>
           </motion.div>
 
-          {/* Project context header */}
-          <ChapterHeader
-            client="TRX App"
-            role="Senior Product Designer"
-            date="Nov 2024 – Dec 2024"
-            tools={['Jotform', 'Google Sheets', 'Figma', 'ChatGPT']}
-          />
+          {/* Two-column header layout */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
+            {/* Left: Project metadata */}
+            <aside className="lg:w-64 flex-shrink-0">
+              <ChapterHeader
+                client="TRX App"
+                role="Senior Product Designer"
+                date="Nov 2024 – Dec 2024"
+                tools={[
+                  { name: 'Jotform', description: 'surveys' },
+                  { name: 'Google Sheets', description: 'feedback aggregation' },
+                  { name: 'Figma', description: 'wireframes and stakeholder presentations' },
+                  { name: 'ChatGPT', description: 'research synthesis' }
+                ]}
+              />
+            </aside>
 
-          {/* Chapter header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-12"
-          >
-            <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-              Chapter 1
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              The Problem
-            </h1>
-          </motion.div>
+            {/* Right: Chapter title */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="flex-1"
+            >
+              <span className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
+                Chapter 1
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+                The Problem
+              </h1>
+            </motion.div>
+          </div>
 
           {/* Content */}
           <motion.div
