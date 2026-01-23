@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 const FeaturedInsightsSection = () => {
   const featuredPosts = [{
     title: 'How I actually use AI as a product designer',
-    excerpt: 'A breakdown of where AI fits into my workflow—and where it doesn\'t.',
+    excerpt: 'A breakdown of where AI fits into my workflow... and where it doesn\'t.',
     href: '/blog/ai-product-designer'
   }, {
     title: '30 days of a design job search',
