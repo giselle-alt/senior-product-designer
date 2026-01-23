@@ -57,8 +57,8 @@ const Index = () => {
       >
         <Hero isVisible={showContent} />
         <FitnessAppSection />
-        <FeaturedInsightsSection />
         <EarlierWorkSection />
+        <FeaturedInsightsSection />
         <Footer />
       </motion.main>
     </div>

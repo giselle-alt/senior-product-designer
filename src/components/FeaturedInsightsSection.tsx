@@ -17,7 +17,7 @@ const FeaturedInsightsSection = () => {
   ];
 
   return (
-    <section className="relative py-20 md:py-24">
+    <section className="relative py-16 md:py-20">
       <div className="container relative px-6 md:px-8">
         {/* Section header */}
         <motion.div
