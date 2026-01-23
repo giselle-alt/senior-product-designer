@@ -26,7 +26,7 @@ const EarlierWorkSection = () => {
     hoverImage: '/images/Work3.png',
     href: 'https://www.behance.net/gallery/136506589/An-always-present-visual-routine'
   }];
-  return <section className="relative py-32 overflow-hidden px-[32px] md:py-[80px]">
+  return <section className="relative py-32 overflow-hidden px-[32px] md:py-[100px]">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none opacity-30" style={{
       background: 'radial-gradient(circle, hsl(42 85% 55% / 0.08), transparent 60%)'

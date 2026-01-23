@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 const Footer = () => {
-  return <footer className="relative py-20 border-t border-border/30">
+  return <footer className="relative py-20 border-t border-border/30 px-[32px]">
       <div className="container px-6 md:px-8">
         <motion.div initial={{
         opacity: 0,

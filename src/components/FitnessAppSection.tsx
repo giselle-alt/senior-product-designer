@@ -17,7 +17,7 @@ const FitnessAppSection = () => {
     subtitle: 'Personalization, reminders, and habit-building',
     href: '/chapter3'
   }];
-  return <section id="work" className="relative py-32 md:py-[60px]">
+  return <section id="work" className="relative py-32 md:py-[100px]">
       {/* Section background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none" style={{
       background: 'radial-gradient(circle, hsl(42 85% 55% / 0.05), transparent 50%)'
