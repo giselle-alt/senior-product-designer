@@ -14,14 +14,16 @@ const EarlierWorkSection = () => {
     year: '2020',
     category: 'UX Evaluation',
     type: 'Website',
-    image: 'https://www.gisellearbo.com/images/work4.png',
+    image: '/images/Work2-Line-Art.png',
+    hoverImage: '/images/Work2.png',
     href: 'https://www.behance.net/gallery/136568201/UX-Evaluation-E-commercer-website/modules/876911591'
   }, {
     title: 'Visual Routine',
     year: '2019',
     category: 'UX Research & Design',
     type: 'Smartwatch & Mobile app',
-    image: 'https://www.gisellearbo.com/images/work3.png',
+    image: '/images/Work3-Line-Art.png',
+    hoverImage: '/images/Work3.png',
     href: 'https://www.behance.net/gallery/136506589/An-always-present-visual-routine'
   }];
   return <section className="relative py-32 md:py-40 overflow-hidden">
