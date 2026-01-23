@@ -256,7 +256,7 @@ const About = () => {
                 </li>
               </ul>
               <p className="text-muted-foreground text-lg leading-relaxed mt-8">
-                If you're looking for a designer who can think critically, work independently, and help teams move forward with confidence, the best way to reach me is on{' '}
+                The best way to reach me is on{' '}
                 <a href="https://www.linkedin.com/in/gisellearbo/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">
                   LinkedIn
                 </a>.
