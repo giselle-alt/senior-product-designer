@@ -124,7 +124,6 @@ const BlogPost1 = () => {
                 alt="AI robot challenging assumptions with 'What if?' speech bubbles" 
                 className="w-full rounded-lg my-8"
               />
-              </p>
 
               <p className="text-foreground/80 leading-relaxed mb-6">
                 For example I'll ask it to:
