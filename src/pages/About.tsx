@@ -35,11 +35,11 @@ const About = () => {
           duration: 0.8,
           delay: 0.2
         }}>
-            <div className="flex flex-col md:flex-row md:items-start md:gap-12 mb-12">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-12 mb-12">
               <div className="mb-8 md:mb-0 md:flex-shrink-0">
                 <ProfileImage />
               </div>
-              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground md:pt-4">
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground">
                 About
               </h1>
             </div>
