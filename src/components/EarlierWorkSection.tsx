@@ -43,11 +43,11 @@ const EarlierWorkSection = () => {
       }} transition={{
         duration: 0.8,
         ease: [0.22, 1, 0.36, 1]
-      }} className="mb-16">
+      }} className="text-center mb-16">
           <h2 className="font-display text-3xl text-foreground mb-4 md:text-4xl">
             Earlier Work
           </h2>
-          <div className="w-24 h-[2px] bg-gradient-to-r from-primary to-transparent" />
+          <div className="w-24 h-[2px] bg-gradient-to-r from-primary to-transparent mx-auto" />
         </motion.div>
 
         {/* Work grid */}
