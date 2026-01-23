@@ -6,7 +6,8 @@ const EarlierWorkSection = () => {
     year: '2022',
     category: 'UX and UI Design',
     type: 'Web app',
-    image: 'https://www.gisellearbo.com/images/work1.png',
+    image: '/images/Work1-Line-art.png',
+    hoverImage: '/images/Work1.png',
     href: 'https://www.behance.net/gallery/154930775/3D-Marketplace-for-Building-Products'
   }, {
     title: 'E-commerce',
