@@ -1,109 +1,82 @@
 
 
-# Chapter Metadata - Left Sidebar Layout
+## Hover Image Transition for "3D Marketplace" Card
 
-## Overview
-Reposition the ChapterHeader component to display as a left-side metadata panel that sits next to the chapter title and scrolls with the content.
+This plan implements a line-art to full-color image transition on hover for the first Earlier Work card.
 
----
+### What Will Change
 
-## Visual Structure
+The "3D Marketplace" card will display a line-art (monochrome) version by default and smoothly fade to the full-color version when hovered. On touch devices, the full-color image will display by default since hover states don't work naturally on touch.
 
-```text
-+---------------------------+----------------------------------------+
-| Project Details           |  CHAPTER 1                             |
-|                           |  The Problem                           |
-| Client: TRX App           |                                        |
-| Role: Senior Product...   |  At the end of 2024, the product had   |
-| Date: Nov 2024 – Dec 2024 |  two clear issues...                   |
-|                           |                                        |
-| Tools Used:               |                                        |
-| • Jotform - surveys       |                                        |
-| • Google Sheets - ...     |                                        |
-| • Figma - wireframes...   |                                        |
-| • ChatGPT - research...   |                                        |
-+---------------------------+----------------------------------------+
+### Implementation Steps
+
+**Step 1: Add Images to Project**
+- Copy `Work1-Line-art.png` to `public/images/Work1-Line-art.png`
+- Copy `Work1.png` to `public/images/Work1.png`
+
+**Step 2: Update WorkCard Component**
+Add optional `hoverImage` prop to support dual-image cards:
+- Add `hoverImage?: string` to the props interface
+- Stack both images absolutely positioned (if hoverImage exists)
+- Default image visible, hover image hidden with `opacity-0`
+- On hover: fade in the hover image with `opacity-100`
+- Remove the current `scale-105` hover transform (per your requirement)
+- Use `transition-opacity duration-300` for smooth 300ms fade
+
+**Step 3: Touch Device Handling**
+- Use CSS media query `@media (hover: hover)` to apply hover behavior only on devices that support it
+- On touch devices (no hover capability), show the full-color image by default
+
+**Step 4: Update EarlierWorkSection Data**
+Modify the first work item to include:
+```
+image: '/images/Work1-Line-art.png'
+hoverImage: '/images/Work1.png'
 ```
 
 ---
 
-## Implementation Approach
+### Technical Details
 
-### 1. Create Two-Column Layout in Chapter Pages
-
-Wrap the chapter header section in a flex container with two columns:
-- **Left column**: ChapterHeader metadata (narrower, ~200-250px)
-- **Right column**: Chapter title and main content
-
-```text
-<div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12">
-  <!-- Left: Metadata -->
-  <aside className="lg:w-64 flex-shrink-0">
-    <ChapterHeader ... />
-  </aside>
+**WorkCard Image Container Changes:**
+```tsx
+<div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
+  {/* Default image - line art on desktop, full-color on touch */}
+  <img
+    src={hoverImage || image}
+    alt={title}
+    className="absolute inset-0 w-full h-full object-cover md:hidden"
+  />
   
-  <!-- Right: Chapter title -->
-  <div className="flex-1">
-    <span>Chapter 1</span>
-    <h1>The Problem</h1>
-  </div>
+  {/* Desktop: show line-art by default */}
+  <img
+    src={image}
+    alt={title}
+    className="hidden md:block absolute inset-0 w-full h-full object-cover"
+  />
+  
+  {/* Desktop hover: fade in full-color */}
+  {hoverImage && (
+    <img
+      src={hoverImage}
+      alt={title}
+      className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    />
+  )}
 </div>
 ```
 
-### 2. Update ChapterHeader Component
+**Touch Device Detection Approach:**
+Using responsive breakpoints combined with CSS `(hover: hover)` media query ensures:
+- Mobile/tablet touch devices see the full-color image
+- Desktop users with mouse see the line-art and can hover for full-color
 
-**File:** `src/components/ChapterHeader.tsx`
+### Files to Modify
 
-Changes:
-- Remove current horizontal inline layout
-- Display metadata in a **vertical stacked list**
-- Add "Project Details" heading
-- Update tools prop to accept `{ name: string, description: string }[]`
-- Display each tool on its own line with description
-
-**New Structure:**
-| Element | Style |
-|---------|-------|
-| Heading | "Project Details" - `text-xs font-medium text-primary uppercase tracking-wider` |
-| Labels | `text-muted-foreground/70 text-sm` |
-| Values | `text-foreground text-sm` (Client in `text-primary`) |
-| Tools | Bulleted list with name + description |
-| Container | Card with `bg-background/50 backdrop-blur-sm border border-border/20 p-4 rounded-lg` |
-
-### 3. Update Chapter Pages
-
-**Files:** `src/pages/Chapter1.tsx`, `src/pages/Chapter2.tsx`, `src/pages/Chapter3.tsx`
-
-Changes:
-- Create flex container around ChapterHeader and chapter title
-- Move chapter title into the right column
-- Update tools data with descriptions
-
-**Chapter Data:**
-
-| Chapter | Tools |
-|---------|-------|
-| Chapter 1 | Jotform (surveys), Google Sheets (feedback aggregation), Figma (wireframes and stakeholder presentations), ChatGPT (research synthesis) |
-| Chapter 2 | Figma (high-fi prototypes and final designs), Maze (task-based usability testing), Claude AI (copy/UX microcopy) |
-| Chapter 3 | Figma (interactive prototypes and design updates), Maze (A/B testing), ChatGPT (idea challenger), MidJourney (moodboards and visual experimentation) |
-
----
-
-## Responsive Behavior
-
-| Breakpoint | Layout |
-|------------|--------|
-| Mobile (<1024px) | Stack vertically - metadata above chapter title |
-| Desktop (1024px+) | Side-by-side - metadata on left, title on right |
-
----
-
-## Files to Modify
-
-| File | Action |
+| File | Change |
 |------|--------|
-| `src/components/ChapterHeader.tsx` | Update to vertical list layout, add Tool interface |
-| `src/pages/Chapter1.tsx` | Add flex wrapper, update tools data |
-| `src/pages/Chapter2.tsx` | Add flex wrapper, update tools data |
-| `src/pages/Chapter3.tsx` | Add flex wrapper, update tools data |
+| `public/images/Work1.png` | New file (copy from upload) |
+| `public/images/Work1-Line-art.png` | New file (copy from upload) |
+| `src/components/WorkCard.tsx` | Add `hoverImage` prop and dual-image rendering |
+| `src/components/EarlierWorkSection.tsx` | Update first card's image paths |
 
