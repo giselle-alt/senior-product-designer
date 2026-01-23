@@ -26,13 +26,13 @@ const EarlierWorkSection = () => {
     hoverImage: '/images/Work3.png',
     href: 'https://www.behance.net/gallery/136506589/An-always-present-visual-routine'
   }];
-  return <section className="relative py-32 md:py-40 overflow-hidden">
+  return <section className="relative py-32 overflow-hidden px-[32px] md:py-[80px]">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none opacity-30" style={{
       background: 'radial-gradient(circle, hsl(42 85% 55% / 0.08), transparent 60%)'
     }} />
 
-      <div className="container relative px-6 md:px-8">
+      <div className="container relative md:px-8 px-0">
         {/* Section header */}
         <motion.div initial={{
         opacity: 0,
@@ -54,7 +54,7 @@ const EarlierWorkSection = () => {
         </motion.div>
 
         {/* Work grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 px-0">
           {works.map((work, index) => <WorkCard key={work.title} {...work} delay={0.1 * index} />)}
         </div>
       </div>

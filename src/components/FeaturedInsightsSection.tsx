@@ -11,7 +11,7 @@ const FeaturedInsightsSection = () => {
     excerpt: 'Tracking outcomes to separate what\'s happening from what it feels like.',
     href: '/blog/job-search-30-days'
   }];
-  return <section className="relative py-32 md:py-40">
+  return <section className="relative py-32 md:py-[60px]">
       <div className="relative max-w-6xl mx-auto px-6 md:px-8">
         {/* Section header */}
         <motion.div initial={{

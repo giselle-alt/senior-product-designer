@@ -17,7 +17,7 @@ const FitnessAppSection = () => {
     subtitle: 'Personalization, reminders, and habit-building',
     href: '/chapter3'
   }];
-  return <section id="work" className="relative py-32 md:py-40">
+  return <section id="work" className="relative py-32 md:py-[60px]">
       {/* Section background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none" style={{
       background: 'radial-gradient(circle, hsl(42 85% 55% / 0.05), transparent 50%)'
@@ -58,13 +58,20 @@ const FitnessAppSection = () => {
         ease: [0.22, 1, 0.36, 1]
       }} className="font-display text-4xl md:text-6xl text-center text-foreground mb-4 lg:text-4xl">Turning drop-offs into daily habits</motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="flex justify-center mb-8"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true,
+        margin: '-100px'
+      }} transition={{
+        duration: 0.8,
+        delay: 0.15,
+        ease: [0.22, 1, 0.36, 1]
+      }} className="flex justify-center mb-8">
           <div className="w-24 h-[2px] bg-gradient-to-r from-primary to-transparent" />
         </motion.div>
 
