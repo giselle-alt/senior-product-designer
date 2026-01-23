@@ -12,7 +12,7 @@ const FeaturedInsightsSection = () => {
     href: '/blog/job-search-30-days'
   }];
   return <section className="relative py-32 md:py-40">
-      <div className="container relative px-6 md:px-8">
+      <div className="relative max-w-6xl mx-auto px-6 md:px-8">
         {/* Section header */}
         <motion.div initial={{
         opacity: 0,

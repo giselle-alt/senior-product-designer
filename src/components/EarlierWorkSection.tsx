@@ -39,7 +39,7 @@ const EarlierWorkSection = () => {
         }}
       />
 
-      <div className="container relative px-6 md:px-8">
+      <div className="relative max-w-6xl mx-auto px-6 md:px-8">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
