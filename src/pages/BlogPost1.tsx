@@ -119,6 +119,12 @@ const BlogPost1 = () => {
                 Once I've framed a problem, I often use AI as <em>MY WORST ENEMY</em> (kidding… more like a counterpart, or I'll ask it to pretend to be "that stakeholder who always contradicts my ideas").
               </p>
 
+              <img 
+                src="/images/AI-challenging-assumptions.png" 
+                alt="AI robot challenging assumptions with 'What if?' speech bubbles" 
+                className="w-full rounded-lg my-8"
+              />
+
               <p className="text-foreground/80 leading-relaxed mb-6">
                 For example I'll ask it to:
               </p>
@@ -171,6 +177,12 @@ const BlogPost1 = () => {
               <p className="text-foreground/80 leading-relaxed mb-6">
                 In this phase, AI helps me challenge my default thinking. Most ideas it gives me are usually rough, and many are discarded, but I think that's totally normal and expected. It's like my own little brainstorming sessions with… me, myself and AI?
               </p>
+
+              <img 
+                src="/images/AI-generating-UI-screens-inline.png" 
+                alt="Designer working with AI robot generating UI screens" 
+                className="w-full rounded-lg my-8"
+              />
 
               <p className="text-foreground/80 leading-relaxed mb-6">
                 When a direction has already been validated (for example, after research, testing, or stakeholder alignment), I sometimes use AI-driven UI generation to move faster. I'm only using vibe coding and Figma-based AI tools if I have:
