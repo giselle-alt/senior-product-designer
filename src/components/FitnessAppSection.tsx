@@ -56,7 +56,17 @@ const FitnessAppSection = () => {
         duration: 0.8,
         delay: 0.1,
         ease: [0.22, 1, 0.36, 1]
-      }} className="font-display text-4xl md:text-6xl text-center text-foreground mb-8 lg:text-4xl">Turning drop-offs into daily habits   </motion.h2>
+      }} className="font-display text-4xl md:text-6xl text-center text-foreground mb-4 lg:text-4xl">Turning drop-offs into daily habits</motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          className="flex justify-center mb-8"
+        >
+          <div className="w-24 h-[2px] bg-gradient-to-r from-primary to-transparent" />
+        </motion.div>
 
         {/* App image placeholder */}
         <motion.div initial={{
