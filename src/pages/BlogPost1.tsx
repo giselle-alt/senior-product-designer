@@ -285,8 +285,12 @@ const BlogPost1 = () => {
                 Final Score
               </h2>
               
+              <p className="text-foreground/80 leading-relaxed mb-6">
+                AI has made my work easier in some very practical ways. I can now spend more time thinking and less time doing. I mostly use it as an assistant, to speed up synthesis or explore ideas faster, since it's not all that creative, and it doesn't replace judgment. The interesting part is how it fits into existing workflows, not how flashy it makes stuff look.
+              </p>
+
               <p className="text-foreground/80 leading-relaxed">
-                This is just my opinion, but I feel like using AI hasn't made my work less thoughtful, if anything, it clears the path for smarter choices… and I can do a lot more things faster! I spend less time stuck in early unknowns and more time doing things like framing the right problems, testing ideas, or balancing users' needs with business constraints. AI is just another tool, but if used well, I can create space for better thinking instead of replacing it.
+                Right now, I'm really curious about how AI interacts with design systems and execution, and I'll be writing more about that as I keep testing it.
               </p>
             </section>
           </motion.div>
