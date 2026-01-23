@@ -4,7 +4,6 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import ProfileImage from '@/components/ProfileImage';
-
 const About = () => {
   return <div className="relative min-h-screen bg-background overflow-hidden">
       {/* Noise texture overlay */}
@@ -35,11 +34,11 @@ const About = () => {
           duration: 0.8,
           delay: 0.2
         }}>
-            <div className="flex flex-col md:flex-row md:items-center md:gap-12 mb-12">
+            <div className="flex flex-col md:flex-row md:items-start md:gap-12 mb-12">
               <div className="mb-8 md:mb-0 md:flex-shrink-0">
                 <ProfileImage />
               </div>
-              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground">
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground md:pt-4">
                 About
               </h1>
             </div>
@@ -58,18 +57,7 @@ const About = () => {
                 My work isn't flashy by accident. I design to solve real problems, align teams, and move products forward. I care less about trends and more about clarity, usability, and decisions that hold up under pressure.
               </motion.p>
               
-              <motion.p initial={{
-              opacity: 0,
-              y: 20
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: 0.5
-            }}>
-                I do my best work in complex environments, when requirements are messy, constraints are real, and the path forward isn't obvious. That's where thoughtful design creates the most value.
-              </motion.p>
+              
               
               <motion.p initial={{
               opacity: 0,
@@ -144,50 +132,38 @@ const About = () => {
               <div className="space-y-10">
                 {/* TRX */}
                 <div className="group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-lg border border-border/40 bg-muted/20 flex items-center justify-center overflow-hidden">
-                      <img src="/images/trx-logo.png" alt="TRX" className="w-5 h-5 object-contain" />
-                    </div>
-                    <h3 className="text-foreground font-medium text-xl">
-                      Senior Product Designer, Willdom @ TRX Training
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground/70 text-sm mb-4 ml-11">2022–Present</p>
-                  <p className="text-muted-foreground leading-relaxed mb-3 ml-11">
+                  <h3 className="text-foreground font-medium text-xl mb-2">
+                    Senior Product Designer, Willdom @ TRX Training
+                  </h3>
+                  <p className="text-muted-foreground/70 text-sm mb-4">2022–Present</p>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
                     I lead product design across multiple TRX products, focusing on discovery, engagement, and scalability.
                   </p>
+                  
                 </div>
 
                 {/* VIRTUALhaus */}
                 <div className="group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-lg border border-border/40 bg-muted/20 flex items-center justify-center overflow-hidden">
-                      <img src="/images/virtualhaus-logo.png" alt="VIRTUALhaus" className="w-5 h-5 object-contain" />
-                    </div>
-                    <h3 className="text-foreground font-medium text-xl">
-                      Senior UX/UI Designer, VIRTUALhaus
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground/70 text-sm mb-4 ml-11">2022</p>
-                  <p className="text-muted-foreground leading-relaxed mb-3 ml-11">
+                  <h3 className="text-foreground font-medium text-xl mb-2">
+                    Senior UX/UI Designer, VIRTUALhaus
+                  </h3>
+                  <p className="text-muted-foreground/70 text-sm mb-4">2022</p>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
                     First design hire at a growth-stage startup, responsible for designing and shipping the MVP.
                   </p>
+                  
                 </div>
 
                 {/* Itaú */}
                 <div className="group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-lg border border-border/40 bg-muted/20 flex items-center justify-center overflow-hidden">
-                      <img src="/images/itau-logo.png" alt="Itaú" className="w-5 h-5 object-contain" />
-                    </div>
-                    <h3 className="text-foreground font-medium text-xl">
-                      UX Designer, Itaú Unibanco
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground/70 text-sm mb-4 ml-11">2021–2022</p>
-                  <p className="text-muted-foreground leading-relaxed mb-3 ml-11">
+                  <h3 className="text-foreground font-medium text-xl mb-2">
+                    UX Designer, Itaú Unibanco
+                  </h3>
+                  <p className="text-muted-foreground/70 text-sm mb-4">2021–2022</p>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
                     Part of the Market Disruption team within a large financial institution, exploring new digital products.
                   </p>
+                  
                 </div>
 
                 {/* Earlier experience */}
@@ -216,15 +192,10 @@ const About = () => {
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
                 Background
               </h2>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg border border-border/40 bg-muted/20 flex items-center justify-center overflow-hidden flex-shrink-0 mt-1">
-                  <img src="/images/snhu-logo.png" alt="SNHU" className="w-6 h-6 object-contain opacity-80" />
-                </div>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Bachelor's degree in Graphic Design and Media Arts<br />
-                  <span className="text-muted-foreground/70">Southern New Hampshire University</span>
-                </p>
-              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Bachelor's degree in Graphic Design and Media Arts<br />
+                <span className="text-muted-foreground/70">Southern New Hampshire University</span>
+              </p>
             </motion.div>
 
             {/* What you get */}
@@ -256,7 +227,7 @@ const About = () => {
                 </li>
               </ul>
               <p className="text-muted-foreground text-lg leading-relaxed mt-8">
-                The best way to reach me is on{' '}
+                If you're looking for a designer who can think critically, work independently, and help teams move forward with confidence, the best way to reach me is on{' '}
                 <a href="https://www.linkedin.com/in/gisellearbo/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors">
                   LinkedIn
                 </a>.
