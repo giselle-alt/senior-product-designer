@@ -12,14 +12,6 @@ const EarlierWorkSection = () => {
       href: 'https://www.behance.net/gallery/154930775/3D-Marketplace-for-Building-Products',
     },
     {
-      title: 'Manage Teams & Projects',
-      year: '2021',
-      category: 'UI Design',
-      type: 'Desktop app',
-      image: 'https://www.gisellearbo.com/images/work2.png',
-      href: 'https://www.behance.net/gallery/136569475/Project-Management-Desktop-App',
-    },
-    {
       title: 'E-commerce',
       year: '2020',
       category: 'UX Evaluation',
