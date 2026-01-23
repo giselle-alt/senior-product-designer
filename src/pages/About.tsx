@@ -3,6 +3,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
+import ProfileImage from '@/components/ProfileImage';
+
 const About = () => {
   return <div className="relative min-h-screen bg-background overflow-hidden">
       {/* Noise texture overlay */}
@@ -33,9 +35,14 @@ const About = () => {
           duration: 0.8,
           delay: 0.2
         }}>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground mb-12">
-              About
-            </h1>
+            <div className="flex flex-col md:flex-row md:items-start md:gap-12 mb-12">
+              <div className="mb-8 md:mb-0 md:flex-shrink-0">
+                <ProfileImage />
+              </div>
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground md:pt-4">
+                About
+              </h1>
+            </div>
             
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <motion.p initial={{
