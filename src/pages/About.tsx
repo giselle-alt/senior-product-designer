@@ -132,38 +132,44 @@ const About = () => {
               <div className="space-y-10">
                 {/* TRX */}
                 <div className="group">
-                  <h3 className="text-foreground font-medium text-xl mb-2">
-                    Senior Product Designer, Willdom @ TRX Training
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img src="/images/trx-logo.png" alt="TRX Training" className="h-6 w-auto opacity-80" />
+                    <h3 className="text-foreground font-medium text-xl">
+                      Senior Product Designer, Willdom @ TRX Training
+                    </h3>
+                  </div>
                   <p className="text-muted-foreground/70 text-sm mb-4">2022–Present</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     I lead product design across multiple TRX products, focusing on discovery, engagement, and scalability.
                   </p>
-                  
                 </div>
 
                 {/* VIRTUALhaus */}
                 <div className="group">
-                  <h3 className="text-foreground font-medium text-xl mb-2">
-                    Senior UX/UI Designer, VIRTUALhaus
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img src="/images/virtualhaus-logo.png" alt="VIRTUALhaus" className="h-6 w-auto opacity-80" />
+                    <h3 className="text-foreground font-medium text-xl">
+                      Senior UX/UI Designer, VIRTUALhaus
+                    </h3>
+                  </div>
                   <p className="text-muted-foreground/70 text-sm mb-4">2022</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     First design hire at a growth-stage startup, responsible for designing and shipping the MVP.
                   </p>
-                  
                 </div>
 
                 {/* Itaú */}
                 <div className="group">
-                  <h3 className="text-foreground font-medium text-xl mb-2">
-                    UX Designer, Itaú Unibanco
-                  </h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img src="/images/itau-logo.png" alt="Itaú Unibanco" className="h-6 w-auto opacity-80" />
+                    <h3 className="text-foreground font-medium text-xl">
+                      UX Designer, Itaú Unibanco
+                    </h3>
+                  </div>
                   <p className="text-muted-foreground/70 text-sm mb-4">2021–2022</p>
                   <p className="text-muted-foreground leading-relaxed mb-3">
                     Part of the Market Disruption team within a large financial institution, exploring new digital products.
                   </p>
-                  
                 </div>
 
                 {/* Earlier experience */}
@@ -192,10 +198,13 @@ const About = () => {
               <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
                 Background
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Bachelor's degree in Graphic Design and Media Arts<br />
-                <span className="text-muted-foreground/70">Southern New Hampshire University</span>
-              </p>
+              <div className="flex items-center gap-4">
+                <img src="/images/snhu-logo.png" alt="Southern New Hampshire University" className="h-10 w-auto opacity-80" />
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Bachelor's degree in Graphic Design and Media Arts<br />
+                  <span className="text-muted-foreground/70">Southern New Hampshire University</span>
+                </p>
+              </div>
             </motion.div>
 
             {/* What you get */}
