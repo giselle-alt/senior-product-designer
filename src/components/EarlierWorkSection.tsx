@@ -32,7 +32,7 @@ const EarlierWorkSection = () => {
       background: 'radial-gradient(circle, hsl(42 85% 55% / 0.08), transparent 60%)'
     }} />
 
-      <div className="container relative md:px-8 px-0">
+      <div className="max-w-6xl mx-auto relative px-4 md:px-8">
         {/* Section header */}
         <motion.div initial={{
         opacity: 0,
