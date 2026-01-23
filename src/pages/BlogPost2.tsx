@@ -222,6 +222,12 @@ const BlogPost2 = () => {
                 One early pattern that I've started seeing is "response timing". When rejections happen, they seem to happen quickly, most within the first few days after applying, with a bigger cluster around day 2.
               </p>
 
+              <img 
+                src="/images/days-until-first-response-inline.png" 
+                alt="Chart showing timing patterns of job application responses with most responses occurring within 2 days" 
+                className="w-full rounded-lg my-8"
+              />
+
               <p className="text-foreground/80 leading-relaxed mb-6">
                 So far, there are no responses beyond five days, and to me, this silence might be a non-response rather than a delayed decision. For now, I'm treating applications with no response after 30 days as "ghosted", which will help me keep the categories consistent.
               </p>
