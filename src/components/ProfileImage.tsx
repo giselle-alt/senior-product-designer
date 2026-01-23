@@ -85,7 +85,7 @@ const ProfileImage = () => {
         className="absolute -bottom-1 right-4 flex items-center gap-1.5 px-3 py-1 bg-background/80 backdrop-blur-sm border border-border/40 rounded-full text-xs text-muted-foreground"
       >
         <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-        <span>Open to work</span>
+        <span>Senior Product Designer</span>
       </motion.div>
     </motion.div>
   );
