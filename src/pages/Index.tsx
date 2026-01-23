@@ -5,6 +5,7 @@ import CursorGlow from '@/components/CursorGlow';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FitnessAppSection from '@/components/FitnessAppSection';
+import FeaturedInsightsSection from '@/components/FeaturedInsightsSection';
 import EarlierWorkSection from '@/components/EarlierWorkSection';
 import Footer from '@/components/Footer';
 
@@ -56,6 +57,7 @@ const Index = () => {
       >
         <Hero isVisible={showContent} />
         <FitnessAppSection />
+        <FeaturedInsightsSection />
         <EarlierWorkSection />
         <Footer />
       </motion.main>
