@@ -10,7 +10,7 @@ const blogPosts = [
     id: 1,
     title: "How I actually use AI as a product designer (end to end)",
     category: "AI in design",
-    image: "/placeholder.svg",
+    image: "/images/AI-generating-UI-screens.png",
     href: "/blog/ai-product-designer",
     featured: true
   },
@@ -18,7 +18,7 @@ const blogPosts = [
     id: 2,
     title: "30 days of a design job search",
     category: "Data-informed design",
-    image: "/placeholder.svg",
+    image: "/images/days-until-first-response.png",
     href: "/blog/job-search-30-days"
   }
 ];
