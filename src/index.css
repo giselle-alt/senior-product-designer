@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cinematic Portfolio Design System
+   Inspired by game start screens, character intros, and digital art installations
+   All colors are HSL for consistency
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@layer base {
+  :root {
+    /* Core Palette - Cinematic Dark with Warm Accents */
+    --background: 240 10% 4%;
+    --foreground: 45 30% 92%;
+    
+    --card: 240 8% 8%;
+    --card-foreground: 45 30% 92%;
+    
+    --popover: 240 8% 6%;
+    --popover-foreground: 45 30% 92%;
+    
+    /* Gold/Amber accent for interactive elements */
+    --primary: 42 85% 55%;
+    --primary-foreground: 240 10% 4%;
+    
+    /* Muted surfaces */
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 45 20% 80%;
+    
+    --muted: 240 6% 15%;
+    --muted-foreground: 45 10% 55%;
+    
+    /* Accent - Warm glow */
+    --accent: 35 80% 50%;
+    --accent-foreground: 240 10% 4%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 45 30% 92%;
+    
+    --border: 240 6% 18%;
+    --input: 240 6% 15%;
+    --ring: 42 85% 55%;
+    
+    --radius: 0.5rem;
+    
+    /* Atmospheric gradients */
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(42 60% 20% / 0.3), transparent);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(42 85% 55% / 0.15), transparent 50%);
+    --gradient-vignette: radial-gradient(ellipse at center, transparent 40%, hsl(240 10% 2% / 0.8));
+    --gradient-depth: linear-gradient(180deg, hsl(240 10% 4%) 0%, hsl(240 12% 2%) 100%);
+    
+    /* Typography */
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Space Grotesk', system-ui, sans-serif;
+    
+    /* Shadows for depth */
+    --shadow-glow: 0 0 60px hsl(42 85% 55% / 0.2);
+    --shadow-soft: 0 20px 60px hsl(240 10% 2% / 0.5);
+    --shadow-card: 0 4px 40px hsl(240 10% 2% / 0.4);
+    
+    /* Animation timings */
+    --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-cinematic: cubic-bezier(0.65, 0, 0.35, 1);
+    
+    --sidebar-background: 240 8% 6%;
+    --sidebar-foreground: 45 30% 92%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 6% 12%;
+    --sidebar-accent-foreground: 45 20% 80%;
+    --sidebar-border: 240 6% 18%;
+    --sidebar-ring: 42 85% 55%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 45 30% 92%;
+    --card: 240 8% 8%;
+    --card-foreground: 45 30% 92%;
+    --popover: 240 8% 6%;
+    --popover-foreground: 45 30% 92%;
+    --primary: 42 85% 55%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 45 20% 80%;
+    --muted: 240 6% 15%;
+    --muted-foreground: 45 10% 55%;
+    --accent: 35 80% 50%;
+    --accent-foreground: 240 10% 4%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 45 30% 92%;
+    --border: 240 6% 18%;
+    --input: 240 6% 15%;
+    --ring: 42 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Atmospheric background layers */
+  .bg-atmospheric {
+    background: var(--gradient-depth);
+    position: relative;
+  }
+  
+  .bg-atmospheric::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    pointer-events: none;
+  }
+
+  /* Text glow effect */
+  .text-glow {
+    text-shadow: 0 0 40px hsl(var(--primary) / 0.4),
+                 0 0 80px hsl(var(--primary) / 0.2);
+  }
+
+  /* Interactive card styling */
+  .card-cinematic {
+    @apply relative overflow-hidden;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--card) / 0.8) 100%
+    );
+    box-shadow: var(--shadow-card);
+    transition: all 0.6s var(--ease-smooth);
+  }
+
+  .card-cinematic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0) 0%,
+      hsl(var(--primary) / 0.05) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-smooth);
+  }
+
+  .card-cinematic:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-glow), var(--shadow-soft);
+  }
+
+  .card-cinematic:hover::before {
+    opacity: 1;
+  }
+
+  /* Chapter navigation styling */
+  .chapter-link {
+    @apply relative block;
+    transition: all 0.5s var(--ease-smooth);
+  }
+
+  .chapter-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--primary)), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease-smooth);
+  }
+
+  .chapter-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Reveal animation classes */
+  .reveal-text {
+    clip-path: inset(0 100% 0 0);
+    animation: reveal-text 1.2s var(--ease-cinematic) forwards;
+  }
+
+  @keyframes reveal-text {
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* Floating particles effect */
+  .particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 50%;
+    animation: float-particle 15s infinite;
+  }
+
+  @keyframes float-particle {
+    0%, 100% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  /* Holographic card effects */
+  @keyframes holo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes holo-pulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes holo-scanlines {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* Vignette effect */
+  .vignette {
+    position: fixed;
+    inset: 0;
+    background: var(--gradient-vignette);
+    pointer-events: none;
+    z-index: 50;
+  }
+}
+
+@layer utilities {
+  /* Text styles */
+  .text-display {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Blur utilities */
+  .blur-atmospheric {
+    filter: blur(100px);
+  }
+
+  /* Custom scrollbar */
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Glass morphism */
+  .glass {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Transition presets */
+  .transition-smooth {
+    transition-timing-function: var(--ease-smooth);
+  }
+
+  .transition-cinematic {
+    transition-timing-function: var(--ease-cinematic);
+  }
+}
