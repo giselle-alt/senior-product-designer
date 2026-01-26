@@ -6,10 +6,8 @@ import Footer from '@/components/Footer';
 import FloatingParticles from '@/components/FloatingParticles';
 import CursorGlow from '@/components/CursorGlow';
 import TableOfContents from '@/components/TableOfContents';
-
 const BlogPost2 = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Background effects */}
       <div className="noise-overlay" />
       <div className="vignette" />
@@ -22,28 +20,32 @@ const BlogPost2 = () => {
       <main className="pt-32 pb-24">
         <article className="container mx-auto px-6 max-w-4xl">
           {/* Back link */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="mb-12">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300">
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
           </motion.div>
 
           {/* Header */}
-          <motion.header
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-16"
-          >
+          <motion.header initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.1
+        }} className="mb-16">
             <p className="text-primary text-sm uppercase tracking-wider mb-4">
               Data-informed design
             </p>
@@ -56,12 +58,16 @@ const BlogPost2 = () => {
           </motion.header>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="prose prose-lg max-w-none"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="prose prose-lg max-w-none">
             {/* Intro */}
             <p className="text-xl text-foreground/90 leading-relaxed mb-8">
               Every time I log in to LinkedIn I read about how hard the job market is right now. I'm hearing things like "responses are inconsistent, timelines are unclear," and "people are getting ghosted."
@@ -222,11 +228,7 @@ const BlogPost2 = () => {
                 One early pattern that I've started seeing is "response timing". When rejections happen, they seem to happen quickly, most within the first few days after applying, with a bigger cluster around day 2.
               </p>
 
-              <img 
-                src="/images/days-until-first-response-inline.png" 
-                alt="Chart showing timing patterns of job application responses with most responses occurring within 2 days" 
-                className="w-full rounded-lg my-8"
-              />
+              <img src="/images/days-until-first-response-inline.png" alt="Chart showing timing patterns of job application responses with most responses occurring within 2 days" className="w-full rounded-lg my-8" />
 
               <p className="text-foreground/80 leading-relaxed mb-6">
                 So far, there are no responses beyond five days, and to me, this silence might be a non-response rather than a delayed decision. For now, I'm treating applications with no response after 30 days as "ghosted", which will help me keep the categories consistent.
@@ -254,7 +256,7 @@ const BlogPost2 = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
-                  <span className="text-foreground/80">The next ~40 applications use Resume B</span>
+                  <span className="text-foreground/80">The next ~40 applications will use Resume B</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-1">•</span>
@@ -329,17 +331,16 @@ const BlogPost2 = () => {
           </motion.div>
 
           {/* Back to blog */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-16 pt-8 border-t border-border/20"
-          >
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
+          <motion.div initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="mt-16 pt-8 border-t border-border/20">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300">
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
@@ -348,8 +349,6 @@ const BlogPost2 = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BlogPost2;
