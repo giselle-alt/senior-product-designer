@@ -249,7 +249,7 @@ const BlogPost1 = () => {
               </p>
 
               <p className="text-foreground/80 leading-relaxed">
-                I've used AI to help me simplify explanations, adapting a decision narrative for different teams (non-tech team members, for example) and removing ambiguity when I'm presenting options. This has been useful when working with people who need clarity, not inspiration or creativity.
+                I've used AI to help me simplify explanations, adapting a decision explanation for different teams (non-tech team members, for example) and when I'm presenting options.
               </p>
             </section>
 
