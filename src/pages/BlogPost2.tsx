@@ -321,7 +321,7 @@ const BlogPost2 = () => {
               </h2>
               
               <p className="text-foreground/80 leading-relaxed mb-6">
-                It's a fun side project. I'm just sharing this to document decisions, not outcomes (yet?!). Hiring pipelines are not easy systems to navigate, and it seems like early data is noisy. Writing this down helps me stay honest about what I know, what I don't, and what still needs time.
+                It's a fun "side quest". I'm just sharing this to document decisions, not outcomes (yet?!). Hiring pipelines are not easy systems to navigate, and it seems like early data is noisy. Writing this down helps me stay honest about what I know, what I don't, and what still needs time.
               </p>
 
               <p className="text-foreground/80 leading-relaxed">
