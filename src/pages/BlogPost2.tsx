@@ -208,7 +208,7 @@ const BlogPost2 = () => {
               </ul>
 
               <p className="text-foreground/80 leading-relaxed">
-                There have been no interviews so far at ~30 days in. Most applications are still unresolved, but this snapshot is descriptive, not diagnostic or final.
+                There have been no live interviews so far at ~30 days in, but some applications advanced to asynchronous screening (written responses or video submissions). Most applications remain unresolved, so this snapshot is descriptive rather than diagnostic or final.
               </p>
             </section>
 
