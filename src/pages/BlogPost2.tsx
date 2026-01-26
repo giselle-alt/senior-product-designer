@@ -148,7 +148,7 @@ const BlogPost2 = () => {
               </div>
 
               <p className="text-foreground/80 leading-relaxed">
-                I'm also using pivot tables to look at outcomes by source, industry, and company size. Nothing fancy… just enough structure to see patterns if and when they appear.
+                I'm also using pivot tables to look at outcomes by source, industry, and company size. Keeping it simple for now, no SQL or complex querying… just enough structure to see patterns if and when they appear.
               </p>
             </section>
 
